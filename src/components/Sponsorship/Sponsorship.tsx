@@ -45,12 +45,12 @@ const Circle = () => {
 
 const Sponsorship = () => {
     return (
-        <div>
+        <div className="">
             <div className="relative pt-36 flex justify-center pb-32"> {/* remove pt-36 after testing  */}
                 <Circle />
                 <h1 className="text-4xl">PATROCINADORES</h1>
             </div>
-            <div className="flex flex-wrap justify-center mx-52 gap-16">
+            <div className="flex flex-wrap justify-center mx-52 gap-20">
                 {sponsors.map((sponsor, index) => {
                     {/* fix the image to be in the middle of the box */ }
                     return (
