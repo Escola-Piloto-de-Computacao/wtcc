@@ -1,5 +1,5 @@
 import React from "react";
-import teste1 from "../../assets/Scientific_show/teste1.svg";
+/*import teste1 from "../../assets/Scientific_show/teste1.svg";*/
 
 interface MostraItem {
     img: string;
@@ -43,7 +43,24 @@ const Botao = () => {
             <p className="mb-7">Submeta seu artigo!</p>
             {/* Adicionar link */}
             <div>
-                <a className="font-bold text-white bg-green-700 rounded-md px-3 py-1" href="https://www.google.com.br/?hl=pt-BR">Clique aqui!</a>
+                <a className="font-bold text-white bg-green-700 rounded-2xl px-3 py-1" href="https://www.google.com.br/?hl=pt-BR">Clique aqui!</a>
+            </div>
+        </div>
+    )
+}
+
+const BotaoAlt = () =>{
+    return (
+        <div className="flex flex-col col-span-1 justify-center items-center gap-4">
+            <p className="text-2xl font-bold">
+                O poder da <span className="bg-yellow-300 rounded-3xl p-1">IA</span> com animes
+            </p>
+
+            {/* não soube fazer sem setar o w-[600] */}
+            <div>
+                <p className=" w-[600px] h-min bg-black text-white rounded-3xl p-2 border-r-8 border-b-8 border-yellow-200">
+                    aaaaaaa uhf 8efoheofuhpwieufhpiwehfpiuwefpiuh peif hpi efpiuew hfp iuhwefh asjdbaoeuf pef ouefpu espfgu uhweufhesufhp uhrpf hrpuh pruh pir hpfu hpeifuhpsiruhfphrfpihw pfih wpfhpih frpih gph pwfihawefij´waijf ´w efçoiwepaofi apwoefh 
+                </p>
             </div>
         </div>
     )
