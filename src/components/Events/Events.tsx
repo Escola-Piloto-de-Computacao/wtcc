@@ -170,7 +170,7 @@ const Events = () => {
     }, []);
 
     return (
-        <div className="h-screen pt-36"> {/* remove pt after testing */}
+        <div className="">
             <Selector {...events[selectedEvent]} changeEvent={changeEvent} />
         </div>
     );
