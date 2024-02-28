@@ -40,9 +40,9 @@ const ScheduleCard = ({ time, title, description, location }: ScheduleCardProps)
                     <p className="w-11/12 ml-6 text-sm text-justify text-balance hyphens-auto break-words">{description}</p>
                 </div>
                 <Popover content={locPop} placement='right' className="w-96 flex align-middle gap-1 cursor-pointer">
-                    <div> {/* TODO add link to map */}
+                    <div className="grid grid-cols-6"> {/* TODO add link to map */}
                         <Loc />
-                        <p className="text-sm font-semibold">{location}</p>
+                        <p className="text-sm font-semibold col-span-5">{location}</p>
                     </div>
                 </Popover>
             </div>

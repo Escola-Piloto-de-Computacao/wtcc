@@ -7,7 +7,7 @@ const activities = [
         time: "8:00 - 10:00",
         title: "Abertura oficial do evento",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue urna faucibus libero tincidunt imperdiet nec quis lacus. Cras venenatis ornare pellentesque. Curabitur vulputate vestibulum tortor ut scelerisque. Quisque hendrerit turpis sed orci convallis consectetur. Morbi convallis rho",
-        location: "Auditorio da PROEC"
+        location: "Auditório da PROEC"
 
     },
 
@@ -16,14 +16,14 @@ const activities = [
         time: "10:00 - 10:30",
         title: "Coffee Break ",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue urna faucibus libero tincidunt imperdiet nec quis lacus. Cras venenatis ornare pellentesque. Curabitur vulputate vestibulum tortor ut scelerisque. Quisque hendrerit turpis sed orci convallis consectetur. Morbi convallis rho",
-        location: "Auditorio da PROEC"
+        location: "Auditório da PROEC"
     },
     {
         day: 1,
         time: "10:30 - 12:00",
         title: "Mostra Científica",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue urna faucibus libero tincidunt imperdiet nec quis lacus. Cras venenatis ornare pellentesque. Curabitur vulputate vestibulum tortor ut scelerisque. Quisque hendrerit turpis sed orci convallis consectetur. Morbi convallis rho",
-        location: "Auditorio da PROEC"
+        location: "Auditório da PROEC"
     },
     {
         day: 1,
@@ -37,7 +37,7 @@ const activities = [
         time: "8:30 - 9:30",
         title: "Palestra 1", // change the name of the activity
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue urna faucibus libero tincidunt imperdiet nec quis lacus. Cras venenatis ornare pellentesque. Curabitur vulputate vestibulum tortor ut scelerisque. Quisque hendrerit turpis sed orci convallis consectetur. Morbi convallis rho",
-        location: "Auditorio da PROEC"
+        location: "Auditório da PROEC"
 
     },
 
@@ -46,14 +46,14 @@ const activities = [
         time: "9:30 - 10:00",
         title: "Coffee Break ",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue urna faucibus libero tincidunt imperdiet nec quis lacus. Cras venenatis ornare pellentesque. Curabitur vulputate vestibulum tortor ut scelerisque. Quisque hendrerit turpis sed orci convallis consectetur. Morbi convallis rho",
-        location: "Auditorio da PROEC"
+        location: "Auditório da PROEC"
     },
     {
         day: 2,
         time: "10:00 - 11:30",
         title: "Mesa Redonda",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue urna faucibus libero tincidunt imperdiet nec quis lacus. Cras venenatis ornare pellentesque. Curabitur vulputate vestibulum tortor ut scelerisque. Quisque hendrerit turpis sed orci convallis consectetur. Morbi convallis rho",
-        location: "Auditorio da PROEC"
+        location: "Auditório da PROEC"
     },
     {
         day: 2,
