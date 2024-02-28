@@ -19,24 +19,38 @@ const Button = () => {
     );
 }
 
+const ImagesBg1 = () => {
+    return (
+        <div className="bg-yellow-100 rounded-xl w-[24%] h-3/6 mb-24 mr-40 absolute -z-10"></div>
+    );
+}
+
+const ImagesBg2 = () => {
+    return (
+        <div className="bg-yellow-100 rounded-xl w-1/5 h-[47%] mb-72 ml-60 absolute -z-30"></div>
+    );
+}
+
 const Home = () => {
     return (
         <section className="lg:grid lg:grid-cols-12 lg:mb-36 xsm:mx-6 lg:mx-10 mt-40" id="Home"> {/* The size of the screens must be 115vh on lg for the space that would be the header */}
             <div className="col-start-2 col-span-5">
-                <div className="mb-16">
-                    <div className="text-4xl text-left font-thin rounded">
-                        <h1 className="bg-yellow-600 inline px-2 py-1">Comece sua jornada no mundo da computação</h1>
+                <div className="mb-12">
+                    <div className="text-4xl text-left font-thin rounded-md">
+                        <h1 className="bg-yellow-400 pl-1 pr-2 inline font-semibold leading-0">Descubra o mundo da computação</h1>
                     </div>
-                    <p className="mt-6 w-10/12 ml-4 text-justify indent-4 text-balance hyphens-auto break-words">With a single point of view, Flex integrates customer data and marketing tools in one flexible cloud platform that lets you get business results wherever they show up.  Flex is the only saas business platform that lets you run your business on one CERTIFICADO, seamlessly across all digital channels.</p>
+                    <p className="mt-5 w-11/12 ml-4 text-justify indent-4 text-balance hyphens-auto break-words">O IX Workshop Técnico-Científico de Computação do RN tem como propósito despertar o interesse dos estudantes de graduação e pós-graduação em pesquisa científica na área de ciência da computação. Além disso, busca discutir temas relevantes para estudantes e profissionais, desenvolver habilidades não abordadas na faculdade, promover o aprendizado mútuo e introduzir os calouros ao curso. O evento proporciona um espaço de intercâmbio entre alunos de Ciências da Computação e cursos de tecnologia, exibindo trabalhos acadêmicos e pesquisas tecnológicas realizadas na universidade.</p>
                 </div>
                 <div>
                     <div className="text-3xl text-left font-thin rounded">
-                        <h1 className="bg-yellow-600 inline px-2 py-1">Segundo título chamativo</h1>
+                        <h1 className="bg-yellow-400 pl-1 pr-2 inline">Despertando o conhecimento...</h1>
                     </div>
-                    <p className="mt-6 ml-4 text-justify indent-4 text-balance hyphens-auto break-words">With a single point of view, Flex integrates customer data and marketing tools in one flexible cloud platform that lets you get business results wherever they show up.  Flex is the only saas business platform that lets you run your business on one CERTIFICADO, seamlessly across all digital channels.</p>
+                    <p className="mt-5 ml-4 text-justify indent-4 text-balance hyphens-auto break-words"> Durante o evento, os participantes terão acesso a uma programação diversificada, incluindo cerimônia de abertura, palestras, mesas-redondas, minicursos, hackathon e maratona de programação. Além disso, ao participar dos minicursos, os alunos poderão obter <span className="bg-yellow-300">CERTIFICADOS</span>, enriquecendo seus currículos e ampliando suas habilidades na área. Não perca essa oportunidade de aprendizado e networking! 🚀🔍🎓</p>
                 </div>
             </div>
             <div className=" col-start-7 col-span-5 flex flex-col items-center justify-center ml-24">
+                <ImagesBg1 />
+                <ImagesBg2 />
                 <div className="col-span-1">
                     <img className="rounded-3xl mb-5 h-52 object-cover" src={test} alt="Imagem de um computador" />
                     <div className="grid grid-cols-3 gap-5">
