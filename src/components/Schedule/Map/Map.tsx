@@ -1,9 +1,9 @@
 import { Wrapper, Status } from "@googlemaps/react-wrapper";
 
-const Map =() =>{
-    return(
+const Map = () => {
+    return (
         <div>
-            
+
         </div>
     );
 }
