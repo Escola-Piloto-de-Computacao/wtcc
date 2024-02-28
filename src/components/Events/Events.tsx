@@ -152,7 +152,7 @@ const Events = () => {
         }
     };
 
-    {/* for moving the selected event with the arrow keys */ }
+    // for moving the selected event with the arrow keys
     React.useEffect(() => {
         const handleKeyDown = (event: KeyboardEvent) => {
             if (event.key === 'ArrowLeft') {
@@ -170,7 +170,7 @@ const Events = () => {
     }, []);
 
     return (
-        <div className="">
+        <div className="pt-6" id="Eventos">
             <Selector {...events[selectedEvent]} changeEvent={changeEvent} />
         </div>
     );
