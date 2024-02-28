@@ -5,10 +5,9 @@ const activities = [
     {
         day: 1,
         time: "8:00 - 10:00",
-        title: "Abertura oficial do evento",
+        title: "Abertura Oficial do Evento",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue urna faucibus libero tincidunt imperdiet nec quis lacus. Cras venenatis ornare pellentesque. Curabitur vulputate vestibulum tortor ut scelerisque. Quisque hendrerit turpis sed orci convallis consectetur. Morbi convallis rho",
         location: "Auditório da PROEC"
-
     },
 
     {
@@ -65,7 +64,7 @@ const activities = [
     {
         day: 3,
         time: "8:00 - 11:00",
-        title: "Hackaton e maratona de programação",
+        title: "Hackaton e Maratona de Programação",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue urna faucibus libero tincidunt imperdiet nec quis lacus. Cras venenatis ornare pellentesque. Curabitur vulputate vestibulum tortor ut scelerisque. Quisque hendrerit turpis sed orci convallis consectetur. Morbi convallis rho",
         location: "LCC"
     },
