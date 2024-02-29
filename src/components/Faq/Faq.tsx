@@ -1,5 +1,5 @@
 import React from 'react'
-import FaqBox from './FAQBox/FaqBox'
+import FaqBox from './FaqBox/FaqBox'
 
 const questions = [
     {
@@ -66,9 +66,8 @@ const Heading = () => {
 }
 
 const Faq: React.FC = () => {
-
     return (
-        <div className='flex items-center flex-col'>
+        <div className='flex items-center flex-col pt-28' id="FAQ">
             <Heading />
             <div className="flex justify-between w-[78%]">
                 <div className="grid gap-12 w-[46%]">

@@ -12,7 +12,7 @@ function App() {
         <div className="App">
             <Header />
             <Home />
-            <div className="pb-20" id="Eventos">
+            <div className="mb-24" id="Eventos">
                 <Events />
             </div>
             <Schedule />

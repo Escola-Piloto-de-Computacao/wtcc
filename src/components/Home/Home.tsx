@@ -33,7 +33,7 @@ const ImagesBg2 = () => {
 
 const Home = () => {
     return (
-        <section className="lg:grid lg:grid-cols-12 lg:mb-36 xsm:mx-6 lg:mx-10 mt-40">
+        <section className="lg:grid lg:grid-cols-12 lg:mb-10 xsm:mx-4 lg:mx-8 mt-40">
             <div className="col-start-2 col-span-5">
                 <div className="mb-12">
                     <div className="text-4xl text-left font-thin rounded-md">

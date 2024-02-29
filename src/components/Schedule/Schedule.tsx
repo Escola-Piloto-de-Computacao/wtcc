@@ -81,7 +81,7 @@ const Schedule = () => {
     const [day, setDay] = useState(1);
 
     return (
-        <section className="flex items-center flex-col gap-3 pt-36" id="Cronograma">
+        <section className="flex items-center flex-col gap-3 pt-36 pb-12" id="Cronograma">
             <h1 className="text-4xl bg-yellow-300 uppercase rounded-lg px-1 mb-2">Cronograma</h1>
             <ul className="text-xl flex items-center flex-row gap-9">
                 <li className={`rounded-lg px-1 ${day === 1 ? 'bg-yellow-300' : ''} transition duration-300  ease-in-out`}><button onClick={() => setDay(1)}>Dia 1</button></li>
