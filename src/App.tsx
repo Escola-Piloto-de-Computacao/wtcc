@@ -11,7 +11,9 @@ function App() {
         <div className="App">
             <Header />
             <Home />
-            <Events />
+            <div className="pb-20" id="Eventos">
+                <Events />
+            </div>
             <Schedule />
             <Footer />
         </div>

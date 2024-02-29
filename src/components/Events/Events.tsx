@@ -172,7 +172,7 @@ const Events = () => {
     }, []);
 
     return (
-        <div className="pt-6 pb-3" id="Eventos">
+        <div className="pt-36 pb-3">
             <Selector {...events[selectedEvent]} changeEvent={changeEvent} />
             <SwitchTransition>
                 <CSSTransition
