@@ -1,5 +1,32 @@
-import React, { CSSProperties } from 'react'
+import React from 'react'
 import FaqBox from './FAQBox/FaqBox'
+
+const questions = [
+    {
+        question: "Os mini-cursos oferecidos cobram algum valor de inscrição?",
+        answer: "Não! Todos os mini-cursos são oferecidos gratuitamente, basta apenas se inscrever para participar!"
+    },
+    {
+        question: "Apenas os alunos de Computação podem se inscrever nos mini-cursos?",
+        answer: "Os mini-cursos são abertos para inscrições de alunos de qualquer curso."
+    },
+    {
+        question: "É necessário algum tipo de conhecimento prévio para participar?",
+        answer: "Todos os mini-cursos começarão do básico. Então não é preciso um conhecimento prévio, pois você aprenderá na hora."
+    },
+    {
+        question: "No período do evento haverá aulas para os alunos de Computação?",
+        answer: "Não, as aulas que ocorrerem nos horários do evento serão suspensas para que todos possam participar dos mini-cursos."
+    },
+    {
+        question: 'Onde fica o LCC - Laboratório de Ciência da Computação?',
+        answer: 'O LCC está localizado no leste da UFERSA, próximo ao Expocenter.'
+    },
+    {
+        question: 'Em qual local será sediado a abertura do evento?',
+        answer: 'A abertura será localizada no Auditório de CCEN.'
+    }
+]
 
 const QuestionMark = () => {
     return (
@@ -41,39 +68,22 @@ const Heading = () => {
 const Faq: React.FC = () => {
 
     return (
-
         <div className='flex items-center flex-col'>
             <Heading />
-            <div className="grid grid-cols-2 gap-10 w-2/3 justify-start">
-                <FaqBox
-                    question="Os mini-cursos oferecidos cobram algum valor de inscrição?"
-                    answer="Não! Todos os mini-cursos são oferecidos gratuitamente, basta apenas se inscrever para participar!"
-                />
-                <FaqBox
-                    question="Apenas os alunos de Computação podem se inscrever nos mini-cursos?"
-                    answer="Os mini-cursos são abertos para inscrições de alunos de qualquer curso."
-                />
-                <FaqBox
-                    question="É necessário algum tipo de conhecimento prévio para participar?"
-                    answer="Todos os mini-cursos começarão do básico. Então não é preciso um conhecimento prévio, pois você aprenderá na hora."
-                />
-                <FaqBox
-                    question="No período do evento haverá aulas para os alunos de Computação?"
-                    answer="Não, as aulas que ocorrerem nos horários do evento serão suspensas para que todos possam participar dos mini-cursos."
-                />
-                <FaqBox
-                    question='Onde fica o LCC - Laboratório de Ciência da Computação?'
-                    answer='O LCC está localizado no leste da UFERSA, próximo ao Expocenter.'
-                />
-                <FaqBox
-                    question='Em qual local será sediado a abertura do evento?'
-                    answer='A abertura será localizada no auditório de CCEN.'
-                />
+            <div className="flex justify-between w-[78%]">
+                <div className="grid gap-12 w-[46%]">
+                    {questions.slice(0, questions.length / 2).map((question, index) => (
+                        <FaqBox key={index} question={question.question} answer={question.answer} />
+                    ))}
+                </div>
+                <div className="grid gap-12 w-[46%]">
+                    {questions.slice(questions.length / 2).map((q, index) => (
+                        <FaqBox key={index} question={q.question} answer={q.answer} />
+                    ))}
+                </div>
             </div>
         </div>
-
     );
-
-};
+}
 
 export default Faq;
