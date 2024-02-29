@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Popover } from 'antd';
+import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import CurrentEvent from "./CurrentEvent/CurrentEvent";
 
 const events = [
@@ -173,7 +174,17 @@ const Events = () => {
     return (
         <div className="pt-6 pb-3" id="Eventos">
             <Selector {...events[selectedEvent]} changeEvent={changeEvent} />
-            <CurrentEvent index={events[selectedEvent].index} />
+            <SwitchTransition>
+                <CSSTransition
+                    key={selectedEvent}
+                    timeout={500}
+                    classNames="fade"
+                >
+                    <div>
+                        <CurrentEvent index={events[selectedEvent].index} />
+                    </div>
+                </CSSTransition>
+            </SwitchTransition>
         </div>
     );
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-//import events
+import ScientificShow from '../../ScientificShow/ScientificShow';
 
 const CurrentEvent = ({ index }: { index: number; }) => {
     switch (index) {
@@ -12,10 +12,7 @@ const CurrentEvent = ({ index }: { index: number; }) => {
             );
         case 2:
             return (
-                <div className="flex flex-col items-center">
-                    <h1 className="text-2xl font-bold">Evento 2</h1>
-                    <p>Descrição do evento 2</p>
-                </div>
+                <ScientificShow />
             );
         default:
             return (

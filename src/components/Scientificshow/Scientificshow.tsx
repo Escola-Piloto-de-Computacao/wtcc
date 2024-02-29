@@ -41,15 +41,14 @@ const Botao = () => {
     return (
         <div className="flex flex-col col-span-1 justify-center text-4xl">
             <p className="mb-7">Submeta seu artigo!</p>
-            {/* Adicionar link */}
-            <div>
-                <a className="font-bold text-white bg-green-700 rounded-2xl px-3 py-1" href="https://www.google.com.br/?hl=pt-BR">Clique aqui!</a>
+            <div> {/* fix download */}
+                <a href="../../assets/documents/submissaodeartigos.doc" download className="font-bold text-white bg-green-700 rounded-2xl px-3 py-1">Clique aqui!</a>
             </div>
         </div>
     )
 }
 
-const BotaoAlt = () =>{
+const BotaoAlt = () => {
     return (
         <div className="flex flex-col col-span-1 justify-center items-center gap-4">
             <p className="text-2xl font-bold">
@@ -59,20 +58,20 @@ const BotaoAlt = () =>{
             {/* não soube fazer sem setar o w-[600] */}
             <div>
                 <p className=" w-[600px] h-min bg-black text-white rounded-3xl p-2 border-r-8 border-b-8 border-yellow-200">
-                    aaaaaaa uhf 8efoheofuhpwieufhpiwehfpiuwefpiuh peif hpi efpiuew hfp iuhwefh asjdbaoeuf pef ouefpu espfgu uhweufhesufhp uhrpf hrpuh pruh pir hpfu hpeifuhpsiruhfphrfpihw pfih wpfhpih frpih gph pwfihawefij´waijf ´w efçoiwepaofi apwoefh 
+                    aaaaaaa uhf 8efoheofuhpwieufhpiwehfpiuwefpiuh peif hpi efpiuew hfp iuhwefh asjdbaoeuf pef ouefpu espfgu uhweufhesufhp uhrpf hrpuh pruh pir hpfu hpeifuhpsiruhfphrfpihw pfih wpfhpih frpih gph pwfihawefij´waijf ´w efçoiwepaofi apwoefh
                 </p>
             </div>
         </div>
     )
 }
 
-const Scientific_show = () => {
+const ScientificShow = () => {
     return (
         <div>
             <div className="flex justify-evenly flex-wrap m-20 gap-4">
                 {
                     mostra.length === 0 ? (
-                        <p>Sem mostras ainda!</p>
+                        <p className=" text-2xl">Sem mostras ainda!</p>
                     ) : (
                         mostra.map((m, index) => {
                             return (
@@ -93,4 +92,4 @@ const Scientific_show = () => {
     );
 }
 
-export default Scientific_show;
+export default ScientificShow;

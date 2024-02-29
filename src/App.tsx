@@ -4,7 +4,6 @@ import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Events from './components/Events/Events';
 import Footer from './components/Footer/Footer';
-import Scientificshow from './components/Scientificshow/Scientificshow';
 
 function App() {
     return (
