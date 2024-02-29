@@ -1,4 +1,4 @@
-import { Wrapper, Status } from "@googlemaps/react-wrapper";
+import React from 'react';
 
 const Map = () => {
     return (
@@ -7,4 +7,5 @@ const Map = () => {
         </div>
     );
 }
+
 export default Map;
