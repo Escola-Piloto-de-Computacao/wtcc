@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Popover } from 'antd';
+import CurrentEvent from "./CurrentEvent/CurrentEvent";
 
 const events = [
     {
@@ -14,7 +15,7 @@ const events = [
         localizacao: "LCC",
         horaEDia: "10:30 - 12:00 ----- Quarta-Feira"
     },
-    {
+    /*{
         index: 3,
         name: "MINICURSOS",
         localizacao: "LCC",
@@ -38,7 +39,7 @@ const events = [
         name: "MESA REDONDA",
         localizacao: "Auditório da PROEC",
         horaEDia: "10:00 - 11:30 ----- Quinta-Feira"
-    }
+    }*/
 ];
 
 const ClickCronograma = () => {
@@ -170,8 +171,9 @@ const Events = () => {
     }, []);
 
     return (
-        <div className="pt-6" id="Eventos">
+        <div className="pt-6 pb-3" id="Eventos">
             <Selector {...events[selectedEvent]} changeEvent={changeEvent} />
+            <CurrentEvent index={events[selectedEvent].index} />
         </div>
     );
 }
