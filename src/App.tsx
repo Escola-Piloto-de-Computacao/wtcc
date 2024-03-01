@@ -5,6 +5,7 @@ import Home from './components/Home/Home';
 import Events from './components/Events/Events';
 import Schedule from './components/Schedule/Schedule';
 import Faq from './components/Faq/Faq';
+import Sponsorship from './components/Sponsorship/Sponsorship';
 import Footer from './components/Footer/Footer';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             </div>
             <Schedule dayInput={dayNedded} handleDayChange={handleDayChange} />
             <Faq />
+            <Sponsorship />
             <Footer />
         </div>
     );
