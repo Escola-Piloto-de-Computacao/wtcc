@@ -1,5 +1,8 @@
 import React from "react";
-import test from "../../assets/Rectangle 200.png";
+import { Image } from "antd";
+import image1 from "../../assets/home/home1.jpeg";
+import image2 from "../../assets/home/home2.jpg";
+import image3 from "../../assets/home/home3.jpg";
 
 const ClickHereArrow = () => {
     return (
@@ -53,10 +56,31 @@ const Images = () => {
             <div className="bg-blue-100 rounded-xl w-[24%] h-3/6 mb-24 mr-40 absolute -z-10"></div>
             <div className="bg-green-100 rounded-xl w-1/5 h-[47%] mb-72 ml-60 absolute -z-30"></div>
             <div className="col-span-1">
-                <img className="rounded-3xl mb-5 h-52 object-cover" src={test} alt="change me" />
-                <div className="grid grid-cols-3 gap-5">
-                    <img className="rounded-3xl col-span-1 h-36 object-cover" src={test} alt="Imagem de um computador" />
-                    <img className="rounded-3xl col-span-2 h-36 object-cover" src={test} alt="Imagem de um computador" />
+                <div className="mb-5 h-52 object-cover">
+                    <Image
+                        width="100%"
+                        src={image1}
+                        alt="Imagem de antigos WTCC's"
+                        style={{ borderRadius: "1.5rem" }}
+                    />
+                </div>
+                <div className="grid grid-cols-12 gap-5 justify-items-center">
+                    <div className="col-span-5 h-36 object-cover">
+                        <Image
+                            width="100%"
+                            src={image2}
+                            alt="Imagem de antigos WTCC's"
+                            style={{ borderRadius: "1.5rem" }}
+                        />
+                    </div>
+                    <div className="col-span-7 h-36 object-cover">
+                        <Image
+                            width="100%"
+                            src={image3}
+                            alt="Imagem de antigos WTCC's"
+                            style={{ borderRadius: "1.5rem" }}
+                        />
+                    </div>
                 </div>
             </div>
             <div className="mt-10">

@@ -37,6 +37,7 @@ const Lectures = () => {
                     <h3 className="text-2xl font-bold text-left font-poppings">{lecture.speaker.name}</h3>
                     <div className="h-10 mt-5 ml-6 grid grid-cols-6 gap-2">
                         <div className="mt-1 mr-2">
+                            {/* make the avatar image responsive */}
                             <Avatar
                                 size={64}
                                 icon={<AntDesignOutlined />}
