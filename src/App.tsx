@@ -8,14 +8,22 @@ import Faq from './components/Faq/Faq';
 import Footer from './components/Footer/Footer';
 
 function App() {
+    const [dayNedded, setDayNedded] = React.useState(1);
+
+    const handleDayChange = (day: number) => {
+        if (day > 3 || day < 1) return;
+        setDayNedded(day);
+        console.log(dayNedded);
+    }
+
     return (
         <div className="App">
             <Header />
             <Home />
             <div className="mb-24" id="Eventos">
-                <Events />
+                <Events dayNedded={dayNedded} handleDayChange={handleDayChange} />
             </div>
-            <Schedule />
+            <Schedule dayInput={dayNedded} handleDayChange={handleDayChange} />
             <Faq />
             <Footer />
         </div>

@@ -3,43 +3,64 @@ import { Popover } from 'antd';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import CurrentEvent from "./CurrentEvent/CurrentEvent";
 
+interface EventsProps {
+    handleDayChange: (day: number) => void;
+    dayNedded: number;
+}
+
+interface SelectorProps {
+    index: number;
+    name: string;
+    localizacao: string;
+    horaEDia: string;
+    dia: number
+    changeEvent: (direction: "left" | "right") => void;
+    dayNedded: number;
+    handleDayChange: (day: number) => void;
+}
+
 const events = [
     {
         index: 1,
         name: "MARATONA DE PROGRAMAÇÃO",
         localizacao: "LCC",
-        horaEDia: "8:00 - 11:00 ---- Sexta-Feira"
+        horaEDia: "8:00 - 11:00 ---- Sexta-Feira",
+        dia: 3
     },
     {
         index: 2,
         name: "MOSTRA CIENTÍFICA",
         localizacao: "LCC",
-        horaEDia: "10:30 - 12:00 ----- Quarta-Feira"
+        horaEDia: "10:30 - 12:00 ----- Quarta-Feira",
+        dia: 1
     },
     /*{
         index: 3,
         name: "MINICURSOS",
         localizacao: "LCC",
-        horaEDia: "14:00 - 18:00 ----- Quarta-Feira e Quinta-Feira"
-
+        horaEDia: "14:00 - 18:00 ----- Quarta-Feira e Quinta-Feira",
+        dia: 1
     },
     {
         index: 4,
         name: "HACKATHON",
         localizacao: "Auditório da PROEC",
-        horaEDia: "8:00 - 11:00 ----- Sexta-Feira"
+        horaEDia: "8:00 - 11:00 ----- Sexta-Feira",
+        dia: 3
     },
     {
         index: 5,
         name: "PALESTRA",
         localizacao: "Auditório da PROEC",
-        horaEDia: "8:30 - 9:30 ----- Quinta-Feira"
+        horaEDia: "8:30 - 9:30 ----- Quinta-Feira",
+        dia: 2
     },
     {
         index: 6,
         name: "MESA REDONDA",
         localizacao: "Auditório da PROEC",
-        horaEDia: "10:00 - 11:30 ----- Quinta-Feira"
+        horaEDia: "10:00 - 11:30 ----- Quinta-Feira",
+        dia: 2
     }*/
 ];
 
@@ -111,20 +132,29 @@ const TimePop = () => {
     );
 }
 
-const Selector = ({ index, name, localizacao, horaEDia, changeEvent }: { index: number; name: string; localizacao: string; horaEDia: string; changeEvent: (direction: "left" | "right") => void }) => {
+const Selector: React.FC<SelectorProps> = ({ index, name, localizacao, horaEDia, dia, changeEvent, handleDayChange, dayNedded }) => {
     const [placement, setPlacement] = useState<'left' | 'right'>('left');
 
     const updatePlacement = () => {
         setPlacement(Math.random() < 0.5 ? 'left' : 'right');
     };
 
+    const scrollToSchedule = () => {
+        const schedule = document.getElementById('Cronograma');
+        if (schedule) {
+            schedule.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <div className="flex flex-col items-center text-4xl justify-center">
             <Popover content={TimePop} placement="top" className="mt-2 flex align-middle gap-1 cursor-pointer">
-                <div className="mt-2 flex flex-wrap gap-1">
-                    <ClickCronograma />
-                    <p className="text-base font-mono">{horaEDia}</p>
-                </div>
+                <button onClick={() => { handleDayChange(dia); scrollToSchedule() }}>
+                    <div className="mt-2 flex flex-wrap gap-1">
+                        <ClickCronograma />
+                        <p className="text-base font-mono">{horaEDia}</p>
+                    </div>
+                </button>
             </Popover>
             <div className="flex justify-center gap-16">
                 <Arrow direction="left" changeEvent={() => changeEvent("left")} />
@@ -143,7 +173,8 @@ const Selector = ({ index, name, localizacao, horaEDia, changeEvent }: { index: 
     );
 }
 
-const Events = () => {
+const Events: React.FC<EventsProps> = ({ dayNedded, handleDayChange }) => {
+
     const [selectedEvent, setSelectedEvent] = useState(1);
 
     const changeEvent = (direction: "left" | "right") => {
@@ -173,7 +204,7 @@ const Events = () => {
 
     return (
         <div className="pt-36 pb-3">
-            <Selector {...events[selectedEvent]} changeEvent={changeEvent} />
+            <Selector {...events[selectedEvent]} changeEvent={changeEvent} dayNedded={dayNedded} handleDayChange={handleDayChange} />
             <SwitchTransition>
                 <CSSTransition
                     key={selectedEvent}

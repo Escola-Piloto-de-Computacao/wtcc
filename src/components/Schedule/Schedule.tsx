@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import ScheduleCard from "./ScheduleCard/ScheduleCard";
 
 const activities = [
@@ -77,20 +77,23 @@ const activities = [
     }
 ]
 
-const Schedule = () => {
-    const [day, setDay] = useState(1);
+interface ScheduleProps {
+    dayInput: number;
+    handleDayChange: (day: number) => void;
+}
 
+const Schedule: React.FC<ScheduleProps> = ({ dayInput, handleDayChange }) => {
     return (
         <section className="flex items-center flex-col gap-3 pt-36 pb-12" id="Cronograma">
             <h1 className="text-4xl bg-yellow-300 uppercase rounded-lg px-1 mb-2">Cronograma</h1>
             <ul className="text-xl flex items-center flex-row gap-9">
-                <li className={`rounded-lg px-1 ${day === 1 ? 'bg-yellow-300' : ''} transition duration-300  ease-in-out`}><button onClick={() => setDay(1)}>Dia 1</button></li>
-                <li className={`rounded-lg px-1 ${day === 2 ? 'bg-yellow-300' : ''} transition duration-300 ease-in-out`}><button onClick={() => setDay(2)}>Dia 2</button></li>
-                <li className={`rounded-lg px-1 ${day === 3 ? 'bg-yellow-300' : ''} transition duration-300 ease-in-out`}><button onClick={() => setDay(3)}>Dia 3</button></li>
+                <li className={`rounded-lg px-1 ${dayInput === 1 ? 'bg-yellow-300' : ''} transition duration-300  ease-in-out`}><button onClick={() => handleDayChange(1)}>Dia 1</button></li>
+                <li className={`rounded-lg px-1 ${dayInput === 2 ? 'bg-yellow-300' : ''} transition duration-300 ease-in-out`}><button onClick={() => handleDayChange(2)}>Dia 2</button></li>
+                <li className={`rounded-lg px-1 ${dayInput === 3 ? 'bg-yellow-300' : ''} transition duration-300 ease-in-out`}><button onClick={() => handleDayChange(3)}>Dia 3</button></li>
             </ul>
-            <h2 className="text-lg mb-4 mt-2">{day === 1 ? "Quarta-Feira" : day === 2 ? "Quinta-Feira" : day === 3 ? "Sexta-Feira" : ""}</h2>
+            <h2 className="text-lg mb-4 mt-2">{dayInput === 1 ? "Quarta-Feira" : dayInput === 2 ? "Quinta-Feira" : dayInput === 3 ? "Sexta-Feira" : ""}</h2>
             {activities.map((activity, index) => {
-                if (activity.day == day) {
+                if (activity.day == dayInput) {
                     return (
                         <ScheduleCard key={index}
                             time={activity.time}
