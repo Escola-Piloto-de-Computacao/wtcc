@@ -12,10 +12,16 @@ const ClickHereArrow = () => {
 }
 
 const Button = () => {
+    {/* TODO reactivate button + change its link */ }
     return (
-        <button className="m-2">
-            <a className="font-bold text-white bg-green-600 rounded-2xl px-4 py-2 text-2xl" href="https://www.google.com.br/?hl=pt-BR">INSCREVA-SE!</a>
-        </button>
+        <div className="m-2">
+            <button
+                className="font-bold text-white bg-green-600 rounded-2xl px-4 py-2 text-2xl cursor-not-allowed"
+                disabled
+                onClick={() => window.location.href = "https://www.google.com.br/?hl=pt-BR"}>
+                INSCREVA-SE!
+            </button>
+        </div>
     );
 }
 
