@@ -93,7 +93,7 @@ const Schedule: React.FC<ScheduleProps> = ({ dayInput, handleDayChange }) => {
             </ul>
             <h2 className="text-lg mb-4 mt-2">{dayInput === 1 ? "Quarta-Feira" : dayInput === 2 ? "Quinta-Feira" : dayInput === 3 ? "Sexta-Feira" : ""}</h2>
             {activities.map((activity, index) => {
-                if (activity.day == dayInput) {
+                if (activity.day === dayInput) {
                     return (
                         <ScheduleCard key={index}
                             time={activity.time}
