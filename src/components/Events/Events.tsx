@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Popover } from 'antd';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
-import CurrentEvent from "./CurrentEvent/CurrentEvent";
+import CurrentEvent from "./CurrentEvent";
 
 interface EventsProps {
     handleDayChange: (day: number) => void;

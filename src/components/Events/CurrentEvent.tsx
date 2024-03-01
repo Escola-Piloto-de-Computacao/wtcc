@@ -1,5 +1,5 @@
 import React from 'react';
-import ScientificShow from "../../ScientificShow/ScientificShow";
+import ScientificShow from "../ScientificShow/ScientificShow";
 
 const CurrentEvent = ({ index }: { index: number; }) => {
     switch (index) {
