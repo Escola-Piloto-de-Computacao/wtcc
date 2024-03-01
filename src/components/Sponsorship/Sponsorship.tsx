@@ -1,9 +1,9 @@
 import React from 'react';
-import ccen from '../../assets/ccen.png';
-import proec from '../../assets/proec.png';
-import ufersa from '../../assets/ufersa.png';
-import nead from '../../assets/nead.jpg';
-import compLicen from '../../assets/compLicen.jpg';
+import ccen from '../../assets/sponsors/ccen.png';
+import proec from '../../assets/sponsors/proec.png';
+import ufersa from '../../assets/sponsors/ufersa.png';
+import nead from '../../assets/sponsors/nead.jpg';
+import compLicen from '../../assets/sponsors/compLicen.jpg';
 
 const sponsors = [
     {
@@ -45,8 +45,8 @@ const Circle = () => {
 
 const Sponsorship = () => {
     return (
-        <div className="">
-            <div className="relative pt-36 flex justify-center pb-32"> {/* remove pt-36 after testing  */}
+        <div className="mt-56">
+            <div className="relative pt-36 flex justify-center pb-32">
                 <Circle />
                 <h1 className="text-4xl">PATROCINADORES</h1>
             </div>
