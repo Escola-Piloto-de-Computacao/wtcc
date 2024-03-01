@@ -21,9 +21,7 @@ function App() {
         <div className="App">
             <Header />
             <Home />
-            <div className="mb-24" id="Eventos">
-                <Events dayNedded={dayNedded} handleDayChange={handleDayChange} />
-            </div>
+            <Events dayNedded={dayNedded} handleDayChange={handleDayChange} />
             <Schedule dayInput={dayNedded} handleDayChange={handleDayChange} />
             <Faq />
             <Sponsorship />

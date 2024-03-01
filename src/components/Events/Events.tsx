@@ -20,13 +20,13 @@ interface SelectorProps {
 }
 
 const events = [
-    {
+    /*{
         index: 1,
         name: "MARATONA DE PROGRAMAÇÃO",
         localizacao: "LCC",
         horaEDia: "8:00 - 11:00 ---- Sexta-Feira",
         dia: 3
-    },
+    },*/
     {
         index: 2,
         name: "MOSTRA CIENTÍFICA",
@@ -203,19 +203,21 @@ const Events: React.FC<EventsProps> = ({ dayNedded, handleDayChange }) => {
     }, []);
 
     return (
-        <div className="pt-36 pb-3">
-            <Selector {...events[selectedEvent]} changeEvent={changeEvent} dayNedded={dayNedded} handleDayChange={handleDayChange} />
-            <SwitchTransition>
-                <CSSTransition
-                    key={selectedEvent}
-                    timeout={500}
-                    classNames="fade"
-                >
-                    <div>
-                        <CurrentEvent index={events[selectedEvent].index} />
-                    </div>
-                </CSSTransition>
-            </SwitchTransition>
+        <div className="mb-24" id="Eventos">
+            <div className="pt-36 pb-3">
+                <Selector {...events[selectedEvent]} changeEvent={changeEvent} dayNedded={dayNedded} handleDayChange={handleDayChange} />
+                <SwitchTransition>
+                    <CSSTransition
+                        key={selectedEvent}
+                        timeout={500}
+                        classNames="fade"
+                    >
+                        <div>
+                            <CurrentEvent index={events[selectedEvent].index} />
+                        </div>
+                    </CSSTransition>
+                </SwitchTransition>
+            </div>
         </div>
     );
 }

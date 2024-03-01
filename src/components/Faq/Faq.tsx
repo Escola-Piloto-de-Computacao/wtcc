@@ -3,16 +3,16 @@ import FaqBox from './FaqBox/FaqBox'
 
 const questions = [
     {
-        question: "Os mini-cursos oferecidos cobram algum valor de inscrição?",
-        answer: "Não! Todos os mini-cursos são oferecidos gratuitamente, basta apenas se inscrever para participar!"
+        question: "Os minicursos oferecidos cobram algum valor de inscrição?",
+        answer: "Não! Todos os mini-cursos são oferecidos gratuitamente por parte dos alunos e professores, basta apenas se inscrever para participar!"
     },
     {
-        question: "Apenas os alunos de Computação podem se inscrever nos mini-cursos?",
-        answer: "Os mini-cursos são abertos para inscrições de alunos de qualquer curso."
+        question: "Apenas os alunos de Computação podem se inscrever nos minicursos?",
+        answer: "Não, todos minicursos são abertos para inscrições de alunos de qualquer curso."
     },
     {
         question: "É necessário algum tipo de conhecimento prévio para participar?",
-        answer: "Todos os mini-cursos começarão do básico. Então não é preciso um conhecimento prévio, pois você aprenderá na hora."
+        answer: "Dependerá do minicurso, a maioria não requer conhecimento conhecimento prévio na área. Veja os pré-requesitos do minicurso na aba de MINICURSOS em Eventos!"
     },
     {
         question: "No período do evento haverá aulas para os alunos de Computação?",
@@ -20,11 +20,15 @@ const questions = [
     },
     {
         question: 'Onde fica o LCC - Laboratório de Ciência da Computação?',
-        answer: 'O LCC está localizado no leste da UFERSA, próximo ao Expocenter.'
+        answer: 'O LCC está localizado no leste da UFERSA, próximo ao Expocenter. Veja no mapa acima!'
     },
     {
         question: 'Em qual local será sediado a abertura do evento?',
-        answer: 'A abertura será localizada no Auditório de CCEN.'
+        answer: 'A abertura será localizada no Auditório de CCEN. Veja no mapa acima!'
+    },
+    {
+        question: "Eu ganho horas complementares participando do evento?",
+        answer: "Com certeza, após a realização da inscricão e participação no evento, suas horas serão contabilizadas no sistema. É possível também ganhar horas extras assistindo os minicursos!"
     }
 ]
 
@@ -56,7 +60,7 @@ const QuestionMarks = () => {
     );
 }
 
-const Heading = () => {
+const Title = () => {
     return (
         <div className="mb-12 mt-12">
             <QuestionMarks />
@@ -68,7 +72,7 @@ const Heading = () => {
 const Faq: React.FC = () => {
     return (
         <div className='flex items-center flex-col pt-28' id="FAQ">
-            <Heading />
+            <Title />
             <div className="flex justify-between w-[78%]">
                 <div className="grid gap-12 w-[46%]">
                     {questions.slice(0, questions.length / 2).map((question, index) => (

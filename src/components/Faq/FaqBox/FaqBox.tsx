@@ -1,6 +1,8 @@
 import React from "react";
 import { Collapse } from 'antd';
 
+//TODO add style to text inside the questions
+
 interface FaqBoxProps {
     key: number;
     question: string;

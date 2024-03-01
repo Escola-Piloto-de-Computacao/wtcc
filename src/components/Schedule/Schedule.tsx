@@ -107,4 +107,4 @@ const Schedule: React.FC<ScheduleProps> = ({ dayInput, handleDayChange }) => {
     );
 }
 
-export default Schedule;
+export default Schedule

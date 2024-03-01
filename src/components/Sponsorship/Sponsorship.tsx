@@ -5,6 +5,8 @@ import ufersa from '../../assets/sponsors/ufersa.png';
 import nead from '../../assets/sponsors/nead.jpg';
 import compLicen from '../../assets/sponsors/compLicen.jpg';
 
+//TODO padronize all images to square size
+
 const sponsors = [
     {
         nome: "CCEN",
@@ -45,17 +47,16 @@ const Circle = () => {
 
 const Sponsorship = () => {
     return (
-        <div className="mt-56">
+        <div className="mt-52">
             <div className="relative pt-36 flex justify-center pb-32">
                 <Circle />
                 <h1 className="text-4xl">PATROCINADORES</h1>
             </div>
-            <div className="flex flex-wrap justify-center mx-52 gap-20">
+            <div className="flex flex-wrap justify-center mx-52 gap-14">
                 {sponsors.map((sponsor, index) => {
-                    {/* fix the image to be in the middle of the box */ }
                     return (
-                        <div className="bg-slate-400 w-1/4 p-12 rounded-md m-4" key={index}>
-                            <img src={sponsor.imagem} alt={sponsor.alt} className="w-full h-auto" />
+                        <div className="bg-slate-300 w-1/4 p-12 rounded-md m-4" key={index}>
+                            <img src={sponsor.imagem} alt={sponsor.alt} className="w-full" />
                         </div>
                     );
                 })}
