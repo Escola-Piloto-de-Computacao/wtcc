@@ -82,16 +82,28 @@ interface ScheduleProps {
     handleDayChange: (day: number) => void;
 }
 
+const handleDayInput = (day: number) => {
+    if (day === 1) {
+        return "Quarta-Feira";
+    } else if (day === 2) {
+        return "Quinta-Feira";
+    } else if (day === 3) {
+        return "Sexta-Feira";
+    } else {
+        return "";
+    }
+}
+
 const Schedule: React.FC<ScheduleProps> = ({ dayInput, handleDayChange }) => {
     return (
         <section className="flex items-center flex-col gap-3 pt-36 pb-12" id="Cronograma">
             <h1 className="text-4xl bg-yellow-300 uppercase rounded-lg px-1 mb-2">Cronograma</h1>
             <ul className="text-xl flex items-center flex-row gap-9">
-                <li className={`rounded-lg px-1 ${dayInput === 1 ? 'bg-yellow-300' : ''} transition duration-300  ease-in-out`}><button onClick={() => handleDayChange(1)}>Dia 1</button></li>
-                <li className={`rounded-lg px-1 ${dayInput === 2 ? 'bg-yellow-300' : ''} transition duration-300 ease-in-out`}><button onClick={() => handleDayChange(2)}>Dia 2</button></li>
-                <li className={`rounded-lg px-1 ${dayInput === 3 ? 'bg-yellow-300' : ''} transition duration-300 ease-in-out`}><button onClick={() => handleDayChange(3)}>Dia 3</button></li>
+                <li className={`rounded-lg px-1 ${dayInput === 1 ? 'bg-green-200' : ''} transition duration-300  ease-in-out`}><button onClick={() => handleDayChange(1)}>Dia 1</button></li>
+                <li className={`rounded-lg px-1 ${dayInput === 2 ? 'bg-green-200' : ''} transition duration-300 ease-in-out`}><button onClick={() => handleDayChange(2)}>Dia 2</button></li>
+                <li className={`rounded-lg px-1 ${dayInput === 3 ? 'bg-green-200' : ''} transition duration-300 ease-in-out`}><button onClick={() => handleDayChange(3)}>Dia 3</button></li>
             </ul>
-            <h2 className="text-lg mb-4 mt-2">{dayInput === 1 ? "Quarta-Feira" : dayInput === 2 ? "Quinta-Feira" : dayInput === 3 ? "Sexta-Feira" : ""}</h2>
+            <h2 className="text-lg mb-4 mt-2">{handleDayInput(dayInput)}</h2>
             {activities.map((activity, index) => {
                 if (activity.day === dayInput) {
                     return (

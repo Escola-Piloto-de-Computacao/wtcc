@@ -160,7 +160,7 @@ const Selector: React.FC<SelectorProps> = ({ index, name, localizacao, horaEDia,
             </Popover>
             <div className="flex justify-center gap-16">
                 <Arrow direction="left" changeEvent={() => changeEvent("left")} />
-                <h1 className="bg-yellow-300 px-2 py-1 rounded">{name}</h1>
+                <h1 className="bg-teal-200 px-2 py-1 rounded">{name}</h1>
                 <Arrow direction="right" changeEvent={() => changeEvent("right")} />
             </div>
             <button onMouseEnter={updatePlacement}>

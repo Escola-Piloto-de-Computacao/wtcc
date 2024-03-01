@@ -50,10 +50,10 @@ const Title2 = () => {
 const Images = () => {
     return (
         <div className=" col-start-7 col-span-5 flex flex-col items-center justify-center ml-24">
-            <div className="bg-yellow-100 rounded-xl w-[24%] h-3/6 mb-24 mr-40 absolute -z-10"></div>
-            <div className="bg-yellow-100 rounded-xl w-1/5 h-[47%] mb-72 ml-60 absolute -z-30"></div>
+            <div className="bg-blue-100 rounded-xl w-[24%] h-3/6 mb-24 mr-40 absolute -z-10"></div>
+            <div className="bg-green-100 rounded-xl w-1/5 h-[47%] mb-72 ml-60 absolute -z-30"></div>
             <div className="col-span-1">
-                <img className="rounded-3xl mb-5 h-52 object-cover" src={test} alt="Imagem de um computador" />
+                <img className="rounded-3xl mb-5 h-52 object-cover" src={test} alt="change me" />
                 <div className="grid grid-cols-3 gap-5">
                     <img className="rounded-3xl col-span-1 h-36 object-cover" src={test} alt="Imagem de um computador" />
                     <img className="rounded-3xl col-span-2 h-36 object-cover" src={test} alt="Imagem de um computador" />
