@@ -34,13 +34,13 @@ const events = [
         horaEDia: "10:30 - 12:00 ----- Quarta-Feira",
         dia: 1
     },
-    /*{
+    {
         index: 3,
         name: "MINICURSOS",
         localizacao: "LCC",
         horaEDia: "14:00 - 18:00 ----- Quarta-Feira e Quinta-Feira",
         dia: 1
-    },
+    },/*
     {
         index: 4,
         name: "HACKATHON",
