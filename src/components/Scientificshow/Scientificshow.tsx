@@ -1,5 +1,4 @@
 import React from "react";
-/*import teste1 from "../../assets/ScientificShow/teste1.svg";*/
 
 interface MostraItem {
     img: string;
