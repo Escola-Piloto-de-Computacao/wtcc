@@ -36,7 +36,7 @@ const mostra: MostraItem[] = [/*
 */
 ];
 
-const Botao = () => {
+const Button = () => {
     return (
         <div className="flex flex-col col-span-1 justify-center text-4xl">
             <p className="mb-7">Submeta seu artigo!</p>
@@ -47,7 +47,7 @@ const Botao = () => {
     )
 }
 
-const BotaoAlt = () => {
+const ButtonAlt = () => {
     return (
         <div className="flex flex-col col-span-1 justify-center items-center gap-4">
             <p className="text-2xl font-bold">
@@ -86,7 +86,7 @@ const ScientificShow = () => {
                     )
                 }
             </div>
-            <Botao />
+            <Button />
         </div>
     );
 }
