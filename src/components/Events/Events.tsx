@@ -3,6 +3,8 @@ import { Popover } from 'antd';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import CurrentEvent from "./CurrentEvent";
 
+// TODO make the arrows be in a fixed position
+
 interface EventsProps {
     handleDayChange: (day: number) => void;
     dayNedded: number;

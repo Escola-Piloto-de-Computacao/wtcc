@@ -1,5 +1,7 @@
 import React from 'react';
 
+// TODO fix downloads
+
 interface Teacher {
     name: string,
     photo: string,
@@ -36,12 +38,15 @@ const minicourses: Minicourse[] = [
     }*/
 ]
 
-const Button = () => {
+const Buttons = () => {
     return (
-        <div className="flex flex-col col-span-1 justify-center text-4xl">
-            <p className="mb-7">Inscreva seu minicurso!</p>
-            <div> {/* fix download */}
-                <a href="../../assets/documents/submissaodeartigos.doc" download className="font-bold text-white bg-green-700 rounded-2xl px-3 py-1">Clique aqui!</a>
+        <div className="flex flex-col col-span-1 justify-center">
+            <p className="mb-7 text-3xl">Inscreva seu minicurso!</p>
+            <div className="grid grid-cols-11 gap-8 text-xl">
+                <a href="../../assets/documents/submissaodeartigos.doc" download
+                    className="col-start-5 col-span-3 font-bold text-white bg-green-700 rounded-2xl px-3 py-1">Clique aqui para o Edital!</a>
+                <a href="../../assets/documents/submissaodeartigos.doc" download
+                    className="col-start-5 col-span-3 font-bold text-white bg-green-700 rounded-2xl px-3 py-1">Clique aqui para a Ficha de Preenchimento!</a>
             </div>
         </div>
     );
@@ -65,7 +70,7 @@ const Minicourses = () => {
                     )
                 }
             </div>
-            <Button />
+            <Buttons />
         </div>
     );
 }
