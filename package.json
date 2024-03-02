@@ -45,6 +45,7 @@
     ]
   },
   "devDependencies": {
+    "@types/webpack-env": "^1.18.4",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@types/react-transition-group": "^4.4.10",
     "autoprefixer": "^10.4.17",

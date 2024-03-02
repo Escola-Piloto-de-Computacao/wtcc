@@ -58,7 +58,20 @@
 .underline-transition.active::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
 
+@keyframes fadeIn2 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.image-fade-in {
+    animation: fadeIn2 2s ease-in-out;
 }
 
 @keyframes fadeIn{
