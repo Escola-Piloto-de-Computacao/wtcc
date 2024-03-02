@@ -23,13 +23,10 @@ function App() {
             <Header />
             <Home />
             <Events dayNedded={dayNedded} handleDayChange={handleDayChange} />
+            <Pictures />
             <Schedule dayInput={dayNedded} handleDayChange={handleDayChange} />
             <Faq />
             <Sponsorship />
-            <Footer />
-            <Footer />
-            <Pictures />
-            <Footer />
             <Footer />
         </div>
     );

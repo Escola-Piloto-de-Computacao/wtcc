@@ -75,7 +75,7 @@ const Pictures = () => {
     const emptyDivsCount = imagesPerPage - currentImages.length;
 
     return (
-        <div className="mt-36 flex flex-col flex-wrap items-center">
+        <div className="pt-36 mb-20 flex flex-col flex-wrap items-center" id="Galeria">
             <h2 className="bg-yellow-400 text-4xl p-1 rounded-lg mb-12">GALERIA</h2>
             <div className="grid grid-cols-12 gap-8 mx-36">
                 {currentImages.map((image, index) => (

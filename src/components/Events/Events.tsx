@@ -205,7 +205,7 @@ const Events: React.FC<EventsProps> = ({ dayNedded, handleDayChange }) => {
     }, []);
 
     return (
-        <div className="mb-24" id="Eventos">
+        <div className="mb-12" id="Eventos">
             <div className="pt-36 pb-3">
                 <Selector {...events[selectedEvent]} changeEvent={changeEvent} dayNedded={dayNedded} handleDayChange={handleDayChange} />
                 <SwitchTransition>
