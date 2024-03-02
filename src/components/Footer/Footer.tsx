@@ -6,7 +6,7 @@ import localizacao from '../../assets/Localizacao.svg';
 
 const Footer = () => {
     return (
-        <footer className="bg-[#04081D] text-white mt-5 lg:mt-24">
+        <footer className="bg-[#04081D] text-white mt-12 lg:mt-56">
             <div className="flex flex-col col-span-2 lg:grid lg:grid-cols-6 py-6 h-full mx-10 pb-14 items-center">
                 <div className="lg:col-span-2 hidden lg:flex h-40">
                     <img src={logom1} alt="" />
