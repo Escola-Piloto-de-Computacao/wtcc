@@ -43,8 +43,12 @@ const Button = () => {
         <div className="flex flex-col col-span-1 justify-center">
             <p className="mb-7 text-3xl">Submeta seu artigo!</p>
             <div className="grid grid-cols-11 gap-8 text-xl">
-                <a href="../../assets/documents/submissaodeartigos.doc" download
-                    className="col-start-5 col-span-3 font-bold text-white bg-green-700 rounded-2xl px-3 py-1">Clique aqui para o Edital!</a>
+                <a
+                    href="../../assets/documents/submissaodeartigos.doc"
+                    download
+                    className="col-start-5 col-span-3 font-bold text-white bg-green-700 rounded-2xl px-3 py-1">
+                    Clique aqui para o Edital!
+                </a>
             </div>
         </div>
     )
@@ -82,7 +86,10 @@ const ScientificShow = () => {
                                         <img src={m.img} alt={m.descricao} />
                                         <p className="text-left text-sm text-slate-500 ml-6"> {m.legenda} </p>
                                     </div>
-                                    <p className="text-justify indent-4 text-balance hyphens-auto break-words"> {m.descricao} </p>
+                                    <p
+                                        className="text-justify indent-4 text-balance hyphens-auto break-words">
+                                        {m.descricao}
+                                    </p>
                                 </div>
                             )
                         })
