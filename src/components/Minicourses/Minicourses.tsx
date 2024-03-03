@@ -41,14 +41,14 @@ const Buttons = () => {
         <div className="flex flex-col col-span-1 justify-center">
             <p className="mb-7 text-3xl">Inscreva seu minicurso!</p>
             <div className="grid grid-cols-11 gap-8 text-xl">
-                <a href="./EditalMinicursos.pdf"
+                <a href="/EditalMinicursos.pdf"
                     download
                     target="_blank"
                     rel="noreferrer"
                     className="col-start-5 col-span-3 font-bold text-white bg-green-700 rounded-2xl px-3 py-1">
                     Clique aqui para o Edital!
                 </a>
-                <a href="../../assets/documents/submissaodeartigos.doc"
+                <a href="/FichaDeMinicurso.doc"
                     target="_blank"
                     className="col-start-5 col-span-3 font-bold text-white bg-green-700 rounded-2xl px-3 py-1">
                     Clique aqui para a Ficha de Preenchimento!
