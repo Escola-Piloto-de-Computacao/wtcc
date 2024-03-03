@@ -88,7 +88,10 @@ const ScientificShow = () => {
                                         <img src={m.img} alt={m.descricao} />
                                         <p className="text-left text-sm text-slate-500 ml-6"> {m.legenda} </p>
                                     </div>
-                                    <p className="text-justify indent-4 text-balance hyphens-auto break-words"> {m.descricao} </p>
+                                    <p
+                                        className="text-justify indent-4 text-balance hyphens-auto break-words">
+                                        {m.descricao}
+                                    </p>
                                 </div>
                             )
                         })
