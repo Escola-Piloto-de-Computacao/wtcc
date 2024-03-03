@@ -48,7 +48,7 @@ const Buttons = () => {
                     className="col-start-5 col-span-3 font-bold text-white bg-green-700 rounded-2xl px-3 py-1">
                     Clique aqui para o Edital!
                 </a>
-                <a href="../../assets/documents/submissaodeartigos.doc"
+                <a href="/FichaDeMinicurso.doc"
                     target="_blank"
                     className="col-start-5 col-span-3 font-bold text-white bg-green-700 rounded-2xl px-3 py-1">
                     Clique aqui para a Ficha de Preenchimento!
