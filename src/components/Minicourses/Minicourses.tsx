@@ -41,7 +41,7 @@ const Buttons = () => {
         <div className="flex flex-col col-span-1 justify-center">
             <p className="mb-7 text-3xl">Inscreva seu minicurso!</p>
             <div className="grid grid-cols-11 gap-8 text-xl">
-                <a href="./EditalMinicursos.pdf"
+                <a href="/EditalMinicursos.pdf"
                     download
                     target="_blank"
                     rel="noreferrer"
