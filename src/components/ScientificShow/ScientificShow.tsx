@@ -42,10 +42,18 @@ const Button = () => {
     return (
         <div className="flex flex-col col-span-1 justify-center">
             <p className="mb-7 text-3xl">Submeta seu artigo!</p>
-            <div className="grid grid-cols-11 gap-8 text-xl">
-                <a href="/SubmissaoDeArtigos.pdf" download
-                    className="col-start-5 col-span-3 font-bold text-white bg-green-700 rounded-2xl px-3 py-1">
-                    Clique aqui para o Edital!
+            <div className="mx-40 flex flex-col justify-center items-center gap-6 text-xl font-bold text-white">
+                <div className="flex space-x-4">
+                    <a href="/SubmissaoDeArtigos.pdf"
+                        download
+                        className="bg-green-700 rounded-2xl px-3 py-1">
+                        Clique aqui para o Edital!
+                    </a>
+                </div>
+                <a
+                    href="mailto:escolapilotodecomputacao@gmail.com?subject=Envio%20de%20Artigo%20para%20IX%20WTCC"
+                    className="bg-blue-500 rounded-2xl px-3 py-1">
+                    Enviar arquivos por email!
                 </a>
             </div>
         </div>

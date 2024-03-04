@@ -40,19 +40,28 @@ const Buttons = () => {
     return (
         <div className="flex flex-col col-span-1 justify-center">
             <p className="mb-7 text-3xl">Inscreva seu minicurso!</p>
-            <div className="grid grid-cols-11 gap-8 text-xl">
-                <a href="/EditalMinicursos.pdf"
-                    download
-                    target="_blank"
-                    rel="noreferrer"
-                    className="col-start-5 col-span-3 font-bold text-white bg-green-700 rounded-2xl px-3 py-1">
-                    Clique aqui para o Edital!
-                </a>
-                <a href="/FichaDeMinicurso.doc"
-                    target="_blank"
-                    className="col-start-5 col-span-3 font-bold text-white bg-green-700 rounded-2xl px-3 py-1">
-                    Clique aqui para a Ficha de Preenchimento!
-                </a>
+            <div className="mx-40 flex-col flex-wrap space-y-6">
+                <div className="col-span-1 flex flex-row justify-center items-center gap-6 text-xl font-bold text-white">
+                    <a href="/EditalMinicursos.pdf"
+                        download
+                        target="_blank"
+                        rel="noreferrer"
+                        className="bg-green-700 rounded-2xl px-3 py-1">
+                        Clique aqui para o Edital!
+                    </a>
+                    <a href="/FichaDeMinicurso.doc"
+                        target="_blank"
+                        className="bg-green-700 rounded-2xl px-3 py-1">
+                        Clique aqui para a Ficha de Preenchimento!
+                    </a>
+                </div>
+                <div className="col-span-1 text-xl font-bold text-white">
+                    <a
+                        href="mailto:escolapilotodecomputacao@gmail.com?subject=Envio%20de%20Ficha%20de%20Minicurso%20para%20o%20IX%20WTCC"
+                        className="bg-blue-500 rounded-2xl px-3 py-1">
+                        Enviar arquivos por email!
+                    </a>
+                </div>
             </div>
         </div>
     );
