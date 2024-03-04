@@ -9,7 +9,9 @@ const Footer = () => {
         <footer className="bg-[#04081D] text-white mt-12 lg:mt-56">
             <div className="flex flex-col col-span-2 lg:grid lg:grid-cols-6 py-6 h-full mx-10 pb-14 items-center">
                 <div className="lg:col-span-2 hidden lg:flex h-40">
-                    <img src={logom1} alt="" />
+                    <a href="https://escolapilotodecomputacao.com.br" target="_blank">
+                        <img src={logom1} alt="" />
+                    </a>
                 </div>
                 <div className="lg:col-span-2 flex flex-col text-white justify-center gap-5 pb-14 lg:pb-0">
                     <h3 className="text-center text-xl lg:mr-14 pt-4 lg:pt-0">Contato</h3>
