@@ -52,6 +52,8 @@ const Button = () => {
                         Clique aqui para as instruções para submissão!
                     </a>
                     <a href="/sbc_template.pdf"
+                        download
+                        target="_blank"
                         className="bg-green-700 rounded-2xl px-3 py-1">
                         Clique aqui para o template da SBC!
                     </a>
