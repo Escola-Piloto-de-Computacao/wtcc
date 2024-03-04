@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import MobileScreen from './components/MobileScreen';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Events from './components/Events/Events';
@@ -11,6 +12,20 @@ import Footer from './components/Footer/Footer';
 import { Spin } from 'antd';
 
 function App() {
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 1048);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 1048);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     const [dayNedded, setDayNedded] = React.useState(1);
 
     const handleDayChange = (day: number) => {
@@ -49,17 +64,18 @@ function App() {
     }, [spinning]); // this effect runs whenever spinning changes
 
     return (
-        <div className={`App ${spinning ? 'no-pointer-events' : ''}`}>
-            <Spin spinning={spinning} fullscreen />
-            <Header />
-            <Home />
-            <Events dayNedded={dayNedded} handleDayChange={handleDayChange} />
-            <Pictures />
-            <Schedule dayInput={dayNedded} handleDayChange={handleDayChange} />
-            <Faq />
-            <Sponsorship />
-            <Footer />
-        </div>
+        isMobile ? <MobileScreen /> :
+            <div className={`App ${spinning ? 'no-pointer-events' : ''}`}>
+                <Spin spinning={spinning} fullscreen />
+                <Header />
+                <Home />
+                <Events dayNedded={dayNedded} handleDayChange={handleDayChange} />
+                <Pictures />
+                <Schedule dayInput={dayNedded} handleDayChange={handleDayChange} />
+                <Faq />
+                <Sponsorship />
+                <Footer />
+            </div>
     );
 }
 
