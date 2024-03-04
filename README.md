@@ -1,3 +1,3 @@
 # WTCC
 
-- Site do wtcc
+- Site do wtcc minha versão
