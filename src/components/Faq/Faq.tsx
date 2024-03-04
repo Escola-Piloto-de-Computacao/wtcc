@@ -24,7 +24,7 @@ const questions = [
     },
     {
         question: 'Em qual local será sediado a abertura do evento?',
-        answer: 'A abertura será localizada no Auditório de CCEN. Veja no mapa acima!'
+        answer: 'A abertura será localizada no Auditório da PROEC. Veja no mapa acima!'
     },
     {
         question: "Eu ganho horas complementares participando do evento?",

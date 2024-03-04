@@ -43,11 +43,17 @@ const Button = () => {
         <div className="flex flex-col col-span-1 justify-center">
             <p className="mb-7 text-3xl">Submeta seu artigo!</p>
             <div className="mx-40 flex flex-col justify-center items-center gap-6 text-xl font-bold text-white">
-                <div className="flex space-x-4">
+                <div className="col-span-1 flex flex-row justify-center items-center gap-6 text-xl font-bold text-white">
                     <a href="/SubmissaoDeArtigos.pdf"
                         download
+                        target="_blank"
+                        rel="noreferrer"
                         className="bg-green-700 rounded-2xl px-3 py-1">
-                        Clique aqui para o Edital!
+                        Clique aqui para as instruções para submissão!
+                    </a>
+                    <a href="/sbc_template.pdf"
+                        className="bg-green-700 rounded-2xl px-3 py-1">
+                        Clique aqui para o template da SBC!
                     </a>
                 </div>
                 <a
