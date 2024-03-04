@@ -1,7 +1,5 @@
 import React from "react";
 
-//TODO fix download
-
 interface MostraItem {
     img: string;
     descricao: string;
