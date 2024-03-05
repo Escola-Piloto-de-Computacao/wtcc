@@ -1,3 +1,3 @@
 # WTCC
 
-- Site do wtcc minha versão
+- Site do evento WTCC da UFERSA
