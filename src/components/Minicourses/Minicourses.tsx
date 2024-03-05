@@ -2,12 +2,17 @@ import React from 'react';
 import Card from './Card';
 import htmlcssjavascript from "../../assets/minicourses/htmlcssjavascript.jpg";
 
-//TODO: add actual courses
+//TODO: add actual courses / add actual teachers
 
 interface Teacher {
     name: string,
     image: string,
-    shortDescription: string
+    shortDescription: string,
+    socialMedia: {
+        github: string,
+        linkedin: string,
+        instagram: string,
+    }
 }
 
 interface Minicourse {
@@ -19,7 +24,7 @@ interface Minicourse {
     teachers: Teacher[]
 }
 
-const minicourses: Minicourse[] = [
+const minicourses: Minicourse[] = [/*
     {
         title: "Iniciando desenvolvimento Front-End",
         subTitle: "HTML e CSS para iniciantes",
@@ -30,12 +35,22 @@ const minicourses: Minicourse[] = [
             {
                 name: "João X",
                 image: "pathToPhoto",
-                shortDescription: "Desenvolvedor Front- End experiente."
+                shortDescription: "Desenvolvedor Front- End experiente.",
+                socialMedia: {
+                    github: "https://github.com/",
+                    linkedin: "https://www.linkedin.com/",
+                    instagram: "https://www.instagram.com/",
+                }
             },
             {
                 name: "João Y",
                 image: "pathToPhoto",
-                shortDescription: "Designer especializado em UI/ UX."
+                shortDescription: "Designer especializado em UI/ UX.",
+                socialMedia: {
+                    github: "github.com",
+                    linkedin: "https://www.linkedin.com/",
+                    instagram: "https://www.instagram.com/",
+                }
             }
         ]
     },
@@ -49,12 +64,22 @@ const minicourses: Minicourse[] = [
             {
                 name: "João X",
                 image: "pathToPhoto",
-                shortDescription: "Desenvolvedor Full- Stack com expertise em NodeJS."
+                shortDescription: "Desenvolvedor Full- Stack com expertise em NodeJS.",
+                socialMedia: {
+                    github: "github.com",
+                    linkedin: "https://www.linkedin.com/",
+                    instagram: "https://www.instagram.com/",
+                }
             },
             {
                 name: "João Y",
                 image: "pathToPhoto",
-                shortDescription: "Especialista em segurança de aplicativos web."
+                shortDescription: "Especialista em segurança de aplicativos web.",
+                socialMedia: {
+                    github: "github.com",
+                    linkedin: "https://www.linkedin.com/",
+                    instagram: "https://www.instagram.com/",
+                }
             }
         ]
     },
@@ -68,12 +93,22 @@ const minicourses: Minicourse[] = [
             {
                 name: "João X",
                 image: "pathToPhoto",
-                shortDescription: "Desenvolvedor Mobile com experiência em React Native."
+                shortDescription: "Desenvolvedor Mobile com experiência em React Native.",
+                socialMedia: {
+                    github: "github.com",
+                    linkedin: "https://www.linkedin.com/",
+                    instagram: "https://www.instagram.com/",
+                }
             },
             {
                 name: "João Y",
                 image: "pathToPhoto",
-                shortDescription: "Designer especializado em interfaces móveis."
+                shortDescription: "Designer especializado em interfaces móveis.",
+                socialMedia: {
+                    github: "github.com",
+                    linkedin: "https://www.linkedin.com/",
+                    instagram: "https://www.instagram.com/",
+                }
             }
         ]
     },
@@ -87,15 +122,25 @@ const minicourses: Minicourse[] = [
             {
                 name: "João X",
                 image: "pathToPhoto",
-                shortDescription: "Desenvolvedor Web com experiência em ReactJS."
+                shortDescription: "Desenvolvedor Web com experiência em ReactJS.",
+                socialMedia: {
+                    github: "github.com",
+                    linkedin: "https://www.linkedin.com/",
+                    instagram: "https://www.instagram.com/",
+                }
             },
             {
                 name: "João Y",
                 image: "pathToPhoto",
-                shortDescription: "Especialista em arquitetura de front- end."
+                shortDescription: "Especialista em arquitetura de front- end.",
+                socialMedia: {
+                    github: "github.com",
+                    linkedin: "https://www.linkedin.com/",
+                    instagram: "https://www.instagram.com/",
+                }
             }
         ]
-    }
+    }*/
 ]
 
 const Buttons = () => {
@@ -130,8 +175,6 @@ const Buttons = () => {
 }
 
 const Minicourses = () => {
-
-
     if (minicourses.length === 0) {
         return (
             <div>

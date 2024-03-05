@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
-import { Modal, Button, Avatar } from 'antd';
+import Teachers from './Teachers';
+import { Modal, Button } from 'antd';
 
 //TODO: add corresponding colors? / add button to see on schedule (the specific minicourse)
 
 interface Teacher {
     name: string,
     image: string,
-    shortDescription: string
+    shortDescription: string,
+    socialMedia: {
+        github: string,
+        linkedin: string,
+        instagram: string,
+    }
 }
 
 interface Minicourse {
@@ -37,18 +43,14 @@ const ModalHeader: React.FC<CardProps> = ({ minicourse }: { minicourse: Minicour
 
 const ModalContent: React.FC<CardProps> = ({ minicourse }: { minicourse: Minicourse }) => {
     return (
-        <div className="mx-5 mt-2 grid grid-cols-2">
-            <div className="mt-6 mr-5 col-span-1">
-                <p className="text-justify">{minicourse.description}</p>
-                <div className="mt-6 grid grid-cols-3">
-                    <Avatar
-                        size={{ xs: 24, sm: 32, md: 40, lg: 64, xl: 80, xxl: 100 }}
-                        icon={<img src={minicourse.teachers[0].image} alt="Imagem do professor" />}
-                    />
-                    <p className="col-span-1">{minicourse.teachers[0].name}</p>
+        <div className="mx-5 mt-5">
+            <div className="grid grid-cols-2">
+                <div className="mt-6 mr-5 col-span-1">
+                    <p className="text-justify">{minicourse.description}</p>
                 </div>
+                <img className="mb-4 col-span-1" src={minicourse.image} alt="Imagem do minicurso" />
             </div>
-            <img className="col-span-1" src={minicourse.image} alt="Imagem do minicurso" />
+            <Teachers teachers={minicourse.teachers} />
         </div>
     );
 }
@@ -86,6 +88,7 @@ const Card: React.FC<CardProps> = ({ minicourse }: { minicourse: Minicourse }) =
                     onOk={() => setOpen(false)}
                     onCancel={() => setOpen(false)}
                     width={"65%"}
+                    footer={null}
                 >
                     <ModalContent minicourse={minicourse} />
                 </Modal>
