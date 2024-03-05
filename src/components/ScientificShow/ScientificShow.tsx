@@ -38,10 +38,29 @@ const mostra: MostraItem[] = [/*
 
 const Button = () => {
     return (
-        <div className="flex flex-col col-span-1 justify-center text-4xl">
-            <p className="mb-7">Submeta seu artigo!</p>
-            <div> {/* fix download */}
-                <a href="../../assets/documents/submissaodeartigos.doc" download className="font-bold text-white bg-green-700 rounded-2xl px-3 py-1">Clique aqui!</a>
+        <div className="flex flex-col col-span-1 justify-center">
+            <p className="mb-7 text-3xl">Submeta seu artigo!</p>
+            <div className="mx-40 flex flex-col justify-center items-center gap-6 text-xl font-bold text-white">
+                <div className="col-span-1 flex flex-row justify-center items-center gap-6 text-xl font-bold text-white">
+                    <a href="/SubmissaoDeArtigos.pdf"
+                        download
+                        target="_blank"
+                        rel="noreferrer"
+                        className="bg-green-700 rounded-2xl px-3 py-1">
+                        Clique aqui para as instruções para submissão!
+                    </a>
+                    <a href="/sbc_template.pdf"
+                        download
+                        target="_blank"
+                        className="bg-green-700 rounded-2xl px-3 py-1">
+                        Clique aqui para o template da SBC!
+                    </a>
+                </div>
+                <a
+                    href="mailto:escolapilotodecomputacao@gmail.com?subject=Envio%20de%20Artigo%20para%20IX%20WTCC"
+                    className="bg-blue-500 rounded-2xl px-3 py-1">
+                    Enviar arquivos por email!
+                </a>
             </div>
         </div>
     )
@@ -79,7 +98,10 @@ const ScientificShow = () => {
                                         <img src={m.img} alt={m.descricao} />
                                         <p className="text-left text-sm text-slate-500 ml-6"> {m.legenda} </p>
                                     </div>
-                                    <p className="text-justify indent-4 text-balance hyphens-auto break-words"> {m.descricao} </p>
+                                    <p
+                                        className="text-justify indent-4 text-balance hyphens-auto break-words">
+                                        {m.descricao}
+                                    </p>
                                 </div>
                             )
                         })

@@ -3,6 +3,8 @@ import { Popover } from 'antd';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import CurrentEvent from "./CurrentEvent";
 
+// TODO make the arrows be in a fixed position
+
 interface EventsProps {
     handleDayChange: (day: number) => void;
     dayNedded: number;
@@ -20,13 +22,13 @@ interface SelectorProps {
 }
 
 const events = [
-    {
+    /*{
         index: 1,
         name: "MARATONA DE PROGRAMAÇÃO",
         localizacao: "LCC",
         horaEDia: "8:00 - 11:00 ---- Sexta-Feira",
         dia: 3
-    },
+    },*/
     {
         index: 2,
         name: "MOSTRA CIENTÍFICA",
@@ -47,14 +49,14 @@ const events = [
         localizacao: "Auditório da PROEC",
         horaEDia: "8:00 - 11:00 ----- Sexta-Feira",
         dia: 3
-    },
+    },*/
     {
         index: 5,
         name: "PALESTRA",
         localizacao: "Auditório da PROEC",
         horaEDia: "8:30 - 9:30 ----- Quinta-Feira",
         dia: 2
-    },
+    },/*
     {
         index: 6,
         name: "MESA REDONDA",
@@ -158,7 +160,7 @@ const Selector: React.FC<SelectorProps> = ({ index, name, localizacao, horaEDia,
             </Popover>
             <div className="flex justify-center gap-16">
                 <Arrow direction="left" changeEvent={() => changeEvent("left")} />
-                <h1 className="bg-yellow-300 px-2 py-1 rounded">{name}</h1>
+                <h1 className="bg-teal-200 px-2 py-1 rounded">{name}</h1>
                 <Arrow direction="right" changeEvent={() => changeEvent("right")} />
             </div>
             <button onMouseEnter={updatePlacement}>
@@ -203,19 +205,21 @@ const Events: React.FC<EventsProps> = ({ dayNedded, handleDayChange }) => {
     }, []);
 
     return (
-        <div className="pt-36 pb-3">
-            <Selector {...events[selectedEvent]} changeEvent={changeEvent} dayNedded={dayNedded} handleDayChange={handleDayChange} />
-            <SwitchTransition>
-                <CSSTransition
-                    key={selectedEvent}
-                    timeout={500}
-                    classNames="fade"
-                >
-                    <div>
-                        <CurrentEvent index={events[selectedEvent].index} />
-                    </div>
-                </CSSTransition>
-            </SwitchTransition>
+        <div className="mb-12" id="Eventos">
+            <div className="pt-36 pb-3">
+                <Selector {...events[selectedEvent]} changeEvent={changeEvent} dayNedded={dayNedded} handleDayChange={handleDayChange} />
+                <SwitchTransition>
+                    <CSSTransition
+                        key={selectedEvent}
+                        timeout={500}
+                        classNames="fade"
+                    >
+                        <div>
+                            <CurrentEvent index={events[selectedEvent].index} />
+                        </div>
+                    </CSSTransition>
+                </SwitchTransition>
+            </div>
         </div>
     );
 }

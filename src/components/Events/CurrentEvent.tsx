@@ -1,6 +1,7 @@
-import React from 'react'
-import ScientificShow from "../ScientificShow/ScientificShow"
-import Minicourses from "../Minicourses/Minicourses"
+import React from 'react';
+import ScientificShow from "../ScientificShow/ScientificShow";
+import Minicourses from "../Minicourses/Minicourses";
+import Lectures from '../Lectures/Lectures';
 
 const CurrentEvent = ({ index }: { index: number; }) => {
     switch (index) {
@@ -18,6 +19,10 @@ const CurrentEvent = ({ index }: { index: number; }) => {
         case 3:
             return (
                 <Minicourses />
+            );
+        case 5:
+            return (
+                <Lectures />
             );
         default:
             return (

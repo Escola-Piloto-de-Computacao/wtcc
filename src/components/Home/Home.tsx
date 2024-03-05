@@ -1,5 +1,8 @@
 import React from "react";
-import test from "../../assets/Rectangle 200.png";
+import { Image } from "antd";
+import image1 from "../../assets/home/home1.jpeg";
+import image2 from "../../assets/home/home2.jpg";
+import image3 from "../../assets/home/home3.jpg";
 
 const ClickHereArrow = () => {
     return (
@@ -25,15 +28,66 @@ const Button = () => {
     );
 }
 
-const ImagesBg1 = () => {
+const Title1 = () => {
     return (
-        <div className="bg-yellow-100 rounded-xl w-[24%] h-3/6 mb-24 mr-40 absolute -z-10"></div>
+        <div className="mb-12">
+            <div className="text-4xl text-left font-thin rounded-md">
+                <h1 className="bg-yellow-300 pl-1 pr-2 inline font-semibold leading-0">Descubra o mundo da computação</h1>
+            </div>
+            <p className="mt-5 w-11/12 ml-4 text-justify indent-4 text-balance hyphens-auto break-words">O IX Workshop Técnico-Científico de Computação do RN tem como propósito despertar o interesse dos estudantes de graduação e pós-graduação em pesquisa científica na área de ciência da computação. Além disso, busca discutir temas relevantes para estudantes e profissionais, desenvolver habilidades não abordadas na faculdade, promover o aprendizado mútuo e introduzir os calouros ao curso. O evento proporciona um espaço de intercâmbio entre alunos de Ciências da Computação e cursos de tecnologia, exibindo trabalhos acadêmicos e pesquisas tecnológicas realizadas na universidade.</p>
+        </div>
     );
 }
 
-const ImagesBg2 = () => {
+const Title2 = () => {
     return (
-        <div className="bg-yellow-100 rounded-xl w-1/5 h-[47%] mb-72 ml-60 absolute -z-30"></div>
+        <div>
+            <div className="text-3xl text-left font-thin rounded">
+                <h1 className="bg-yellow-300 pl-1 pr-2 inline">Despertando o conhecimento...</h1>
+            </div>
+            <p className="mt-5 ml-4 text-justify indent-4 text-balance hyphens-auto break-words"> Durante o evento, os participantes terão acesso a uma programação diversificada, incluindo cerimônia de abertura, palestras, mesas-redondas, minicursos, hackathon e maratona de programação. Além disso, ao participar dos minicursos, os alunos poderão obter <span className="bg-yellow-300">CERTIFICADOS</span>, enriquecendo seus currículos e ampliando suas habilidades na área. Não perca essa oportunidade de aprendizado e networking! 🚀🔍🎓</p>
+        </div>
+    );
+}
+
+const Images = () => {
+    return (
+        <div className=" col-start-7 col-span-5 flex flex-col items-center justify-center ml-24">
+            <div className="bg-blue-100 rounded-xl w-[24%] h-3/6 mb-24 mr-40 absolute -z-10"></div>
+            <div className="bg-green-100 rounded-xl w-1/5 h-[47%] mb-72 ml-60 absolute -z-30"></div>
+            <div className="col-span-1">
+                <div className="mb-5 h-52 object-cover">
+                    <Image
+                        width="100%"
+                        src={image1}
+                        alt="Imagem de antigos WTCC's"
+                        style={{ borderRadius: "1.5rem" }}
+                    />
+                </div>
+                <div className="grid grid-cols-12 gap-5 justify-items-center">
+                    <div className="col-span-5 h-36 object-cover">
+                        <Image
+                            width="100%"
+                            src={image2}
+                            alt="Imagem de antigos WTCC's"
+                            style={{ borderRadius: "1.5rem" }}
+                        />
+                    </div>
+                    <div className="col-span-7 h-36 object-cover">
+                        <Image
+                            width="100%"
+                            src={image3}
+                            alt="Imagem de antigos WTCC's"
+                            style={{ borderRadius: "1.5rem" }}
+                        />
+                    </div>
+                </div>
+            </div>
+            <div className="mt-10">
+                <Button />
+                <ClickHereArrow />
+            </div>
+        </div>
     );
 }
 
@@ -41,36 +95,12 @@ const Home = () => {
     return (
         <section className="lg:grid lg:grid-cols-12 lg:mb-10 xsm:mx-4 lg:mx-8 mt-40">
             <div className="col-start-2 col-span-5">
-                <div className="mb-12">
-                    <div className="text-4xl text-left font-thin rounded-md">
-                        <h1 className="bg-yellow-400 pl-1 pr-2 inline font-semibold leading-0">Descubra o mundo da computação</h1>
-                    </div>
-                    <p className="mt-5 w-11/12 ml-4 text-justify indent-4 text-balance hyphens-auto break-words">O IX Workshop Técnico-Científico de Computação do RN tem como propósito despertar o interesse dos estudantes de graduação e pós-graduação em pesquisa científica na área de ciência da computação. Além disso, busca discutir temas relevantes para estudantes e profissionais, desenvolver habilidades não abordadas na faculdade, promover o aprendizado mútuo e introduzir os calouros ao curso. O evento proporciona um espaço de intercâmbio entre alunos de Ciências da Computação e cursos de tecnologia, exibindo trabalhos acadêmicos e pesquisas tecnológicas realizadas na universidade.</p>
-                </div>
-                <div>
-                    <div className="text-3xl text-left font-thin rounded">
-                        <h1 className="bg-yellow-400 pl-1 pr-2 inline">Despertando o conhecimento...</h1>
-                    </div>
-                    <p className="mt-5 ml-4 text-justify indent-4 text-balance hyphens-auto break-words"> Durante o evento, os participantes terão acesso a uma programação diversificada, incluindo cerimônia de abertura, palestras, mesas-redondas, minicursos, hackathon e maratona de programação. Além disso, ao participar dos minicursos, os alunos poderão obter <span className="bg-yellow-300">CERTIFICADOS</span>, enriquecendo seus currículos e ampliando suas habilidades na área. Não perca essa oportunidade de aprendizado e networking! 🚀🔍🎓</p>
-                </div>
+                <Title1 />
+                <Title2 />
             </div>
-            <div className=" col-start-7 col-span-5 flex flex-col items-center justify-center ml-24">
-                <ImagesBg1 />
-                <ImagesBg2 />
-                <div className="col-span-1">
-                    <img className="rounded-3xl mb-5 h-52 object-cover" src={test} alt="Imagem de um computador" />
-                    <div className="grid grid-cols-3 gap-5">
-                        <img className="rounded-3xl col-span-1 h-36 object-cover" src={test} alt="Imagem de um computador" />
-                        <img className="rounded-3xl col-span-2 h-36 object-cover" src={test} alt="Imagem de um computador" />
-                    </div>
-                </div>
-                <div className="mt-10">
-                    <Button />
-                    <ClickHereArrow />
-                </div>
-            </div>
+            <Images />
         </section>
     );
 }
 
-export default Home;
+export default Home
