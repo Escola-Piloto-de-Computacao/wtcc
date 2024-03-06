@@ -66,11 +66,31 @@ const Header = () => {
                     </a>
                 </div>
                 <div className="flex gap-20 font-semibold text-xl lg:mr-20 lg:justify-start lg:items-start justify-center items-center">
-                    <a href="#" className={`hover:text-gray-600 hidden lg:block underline-transition ${activeSelection === 'Home' ? 'active' : ''}`} onClick={(e) => { handleSelection(e, 'Home') }}>Home</a>
-                    <a href="#Eventos" className={`hover:text-gray-600 hidden lg:block underline-transition ${activeSelection === 'Eventos' ? 'active' : ''}`} onClick={(e) => { handleSelection(e, 'Eventos') }}>Eventos</a>
-                    <a href="#Galeria" className={`hover:text-gray-500 hidden lg:block underline-transition ${activeSelection === 'Galeria' ? 'active' : ''}`} onClick={(e) => { handleSelection(e, 'Galeria') }}>Galeria</a>
-                    <a href="#Cronograma" className={`hover:text-gray-600 hidden lg:block underline-transition ${activeSelection === 'Cronograma' ? 'active' : ''}`} onClick={(e) => { handleSelection(e, 'Cronograma') }}>Cronograma</a>
-                    <a href="#FAQ" className={`hover:text-gray-600 hidden lg:block underline-transition ${activeSelection === 'FAQ' ? 'active' : ''}`} onClick={(e) => { handleSelection(e, 'FAQ') }}>FAQ</a>
+                    <a href="#"
+                        className={`hover:text-gray-600 hidden lg:block underline-transition ${activeSelection === 'Home' ? 'active' : ''}`}
+                        onClick={(e) => { handleSelection(e, 'Home') }}>
+                        Home
+                    </a>
+                    <a href="#Eventos"
+                        className={`hover:text-gray-600 hidden lg:block underline-transition ${activeSelection === 'Eventos' ? 'active' : ''}`}
+                        onClick={(e) => { handleSelection(e, 'Eventos') }}>
+                        Eventos
+                    </a>
+                    <a href="#Galeria"
+                        className={`hover:text-gray-500 hidden lg:block underline-transition ${activeSelection === 'Galeria' ? 'active' : ''}`}
+                        onClick={(e) => { handleSelection(e, 'Galeria') }}>
+                        Galeria
+                    </a>
+                    <a href="#Cronograma"
+                        className={`hover:text-gray-600 hidden lg:block underline-transition ${activeSelection === 'Cronograma' ? 'active' : ''}`}
+                        onClick={(e) => { handleSelection(e, 'Cronograma') }}>
+                        Cronograma
+                    </a>
+                    <a href="#FAQ"
+                        className={`hover:text-gray-600 hidden lg:block underline-transition ${activeSelection === 'FAQ' ? 'active' : ''}`}
+                        onClick={(e) => { handleSelection(e, 'FAQ') }}>
+                        FAQ
+                    </a>
                 </div>
             </div>
         </header >
