@@ -1,32 +1,39 @@
-import React from 'react'
-import FaqBox from './FaqBox/FaqBox'
+import React from 'react';
+import FaqBox from './FaqBox';
 
 const questions = [
     {
+        key: 1,
         question: "Os minicursos oferecidos cobram algum valor de inscrição?",
         answer: "Não! Todos os mini-cursos são oferecidos gratuitamente por parte dos alunos e professores, basta apenas se inscrever para participar!"
     },
     {
+        key: 2,
         question: "Apenas os alunos de Computação podem se inscrever nos minicursos?",
         answer: "Não, todos minicursos são abertos para inscrições de alunos de qualquer curso."
     },
     {
+        key: 3,
         question: "É necessário algum tipo de conhecimento prévio para participar?",
         answer: "Dependerá do minicurso, a maioria não requer conhecimento conhecimento prévio na área. Veja os pré-requesitos do minicurso na aba de MINICURSOS em Eventos!"
     },
     {
+        key: 4,
         question: "No período do evento haverá aulas para os alunos de Computação?",
         answer: "Não, as aulas que ocorrerem nos horários do evento serão suspensas para que todos possam participar dos mini-cursos."
     },
     {
+        key: 5,
         question: 'Onde fica o LCC - Laboratório de Ciência da Computação?',
         answer: 'O LCC está localizado no leste da UFERSA, próximo ao Expocenter. Veja no mapa acima!'
     },
     {
+        key: 6,
         question: 'Em qual local será sediado a abertura do evento?',
         answer: 'A abertura será localizada no Auditório da PROEC. Veja no mapa acima!'
     },
     {
+        key: 7,
         question: "Eu ganho horas complementares participando do evento?",
         answer: "Com certeza, após a realização da inscricão e participação no evento, suas horas serão contabilizadas no sistema. É possível também ganhar horas extras assistindo os minicursos!"
     }
@@ -75,13 +82,13 @@ const Faq: React.FC = () => {
             <Title />
             <div className="flex justify-between w-[78%]">
                 <div className="grid gap-12 w-[46%]">
-                    {questions.slice(0, questions.length / 2).map((question, index) => (
-                        <FaqBox key={index} question={question.question} answer={question.answer} />
+                    {questions.slice(0, questions.length / 2).map((question) => (
+                        <FaqBox key={question.key} question={question.question} answer={question.answer} />
                     ))}
                 </div>
                 <div className="grid gap-12 w-[46%]">
-                    {questions.slice(questions.length / 2).map((q, index) => (
-                        <FaqBox key={index} question={q.question} answer={q.answer} />
+                    {questions.slice(questions.length / 2).map((q) => (
+                        <FaqBox key={q.key} question={q.question} answer={q.answer} />
                     ))}
                 </div>
             </div>

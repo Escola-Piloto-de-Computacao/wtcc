@@ -13,7 +13,7 @@ interface Teacher {
         linkedin: string,
         instagram: string,
     }
-}
+};
 
 interface Minicourse {
     title: string,
@@ -22,7 +22,7 @@ interface Minicourse {
     shortDescription: string,
     description: string,
     teachers: Teacher[]
-}
+};
 
 const minicourses: Minicourse[] = [/*
     {
@@ -141,7 +141,7 @@ const minicourses: Minicourse[] = [/*
             }
         ]
     }*/
-]
+];
 
 const Buttons = () => {
     return (
@@ -172,7 +172,7 @@ const Buttons = () => {
             </div>
         </div>
     );
-}
+};
 
 const Minicourses = () => {
     if (minicourses.length === 0) {
@@ -195,6 +195,6 @@ const Minicourses = () => {
             </div>
         );
     }
-}
+};
 
 export default Minicourses;

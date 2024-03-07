@@ -1,5 +1,5 @@
 import React from "react";
-import ScheduleCard from "./ScheduleCard/ScheduleCard";
+import ScheduleCard from "./ScheduleCard";
 
 const activities = [
     {
@@ -9,7 +9,6 @@ const activities = [
         description: "",
         location: "Auditório da PROEC"
     },
-
     {
         day: 1,
         time: "10:00 - 10:30",
@@ -75,12 +74,12 @@ const activities = [
         description: "",
         location: "LCC"
     }
-]
+];
 
 interface ScheduleProps {
     dayInput: number;
     handleDayChange: (day: number) => void;
-}
+};
 
 const handleDayInput = (day: number) => {
     if (day === 1) {
@@ -92,7 +91,7 @@ const handleDayInput = (day: number) => {
     } else {
         return "";
     }
-}
+};
 
 const Schedule: React.FC<ScheduleProps> = ({ dayInput, handleDayChange }) => {
     return (
@@ -121,6 +120,6 @@ const Schedule: React.FC<ScheduleProps> = ({ dayInput, handleDayChange }) => {
             })}
         </section>
     );
-}
+};
 
 export default Schedule

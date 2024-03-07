@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import MobileScreen from './components/MobileScreen';
-import Header from './components/Header/Header';
-import Home from './components/Home/Home';
-import Events from './components/Events/Events';
-import Pictures from './components/Pictures/Pictures';
-import Schedule from './components/Schedule/Schedule';
-import Faq from './components/Faq/Faq';
-import Sponsorship from './components/Sponsorship/Sponsorship';
-import Footer from './components/Footer/Footer';
+import Header from './components/Header';
+import Home from './components/Home';
+import Events from './components/Events';
+import Pictures from './components/Pictures';
+import Schedule from './components/Schedule';
+import Faq from './components/Faq';
+import Sponsorship from './components/Sponsorship';
+import Footer from './components/Footer';
 import { Spin } from 'antd';
 
 function App() {

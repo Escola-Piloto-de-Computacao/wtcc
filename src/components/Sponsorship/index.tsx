@@ -33,7 +33,7 @@ const sponsors = [
         alt: "Licenciatura Curso de Computação",
         imagem: compLicen
     }
-]
+];
 
 const Circle = () => {
     return (
@@ -43,7 +43,7 @@ const Circle = () => {
             </svg>
         </div>
     );
-}
+};
 
 const Sponsorship = () => {
     return (
@@ -63,6 +63,6 @@ const Sponsorship = () => {
             </div>
         </div>
     );
-}
+};
 
 export default Sponsorship;

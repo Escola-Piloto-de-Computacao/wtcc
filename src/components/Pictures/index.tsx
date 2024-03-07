@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Pagination, Image } from 'antd';
 import i1 from '../../assets/gallery/1.jpeg';
 import i2 from '../../assets/gallery/2.jpeg';
@@ -78,18 +78,18 @@ const Pictures = () => {
         <div className="pt-36 mb-20 flex flex-col flex-wrap items-center" id="Galeria">
             <h2 className="bg-yellow-400 text-4xl p-1 rounded-lg mb-12">GALERIA</h2>
             <div className="grid grid-cols-12 gap-8 mx-36">
-            <Image.PreviewGroup>
-                {currentImages.map((image, index) => (
-                    <div key={index} className="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-4 xl:col-span-4">
-                        <Image
-                            key={index + key} // add key here
-                            src={image.link}
-                            alt="Imagem de eventos passados"
-                            className="w-200 h-100 rounded-lg image-fade-in"
-                        />
-                        <p className="ml-6 text-left text-sm">{image.description}</p>
-                    </div>
-                ))}
+                <Image.PreviewGroup>
+                    {currentImages.map((image, index) => (
+                        <div key={index} className="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-4 xl:col-span-4">
+                            <Image
+                                key={index + key} // add key here
+                                src={image.link}
+                                alt="Imagem de eventos passados"
+                                className="w-200 h-100 rounded-lg image-fade-in"
+                            />
+                            <p className="ml-6 text-left text-sm">{image.description}</p>
+                        </div>
+                    ))}
                 </Image.PreviewGroup>
                 {/* render the empty divs */}
                 {Array.from({ length: emptyDivsCount }, (_, index) => (
@@ -109,6 +109,6 @@ const Pictures = () => {
             </div>
         </div>
     );
-}
+};
 
 export default Pictures;

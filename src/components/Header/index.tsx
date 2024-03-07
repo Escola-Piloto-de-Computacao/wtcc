@@ -79,7 +79,7 @@ const Header = () => {
                 className={`flex justify-between max-w-screen-xl py-3 ${animateHeader && "py-4"
                     } mx-auto items-center px-8 trasition ease-in-out duration-500`}
             >
-                <div className={`flex items-center w-[15vh] ${animateHeader && "w-[17vh]"}`}>
+                <div className={"flex items-center w-[15vh]"}>
                     <a
                         href="#"
                         className="text-xl font-bold tracking-tighter text-indigo-400 pr-8 flex items-center"

@@ -6,7 +6,7 @@ interface ScheduleCardProps {
     title: string;
     description: string
     location: string;
-}
+};
 
 const Loc = () => {
     return (
@@ -21,7 +21,7 @@ const Loc = () => {
             </svg>
         </div>
     );
-}
+};
 
 const locPop = () => {
     return (
@@ -30,7 +30,7 @@ const locPop = () => {
         </div>
     );
 
-}
+};
 
 const ScheduleCard = ({ time, title, description, location }: ScheduleCardProps) => {
     return (
@@ -50,6 +50,6 @@ const ScheduleCard = ({ time, title, description, location }: ScheduleCardProps)
             </div>
         </div>
     );
-}
+};
 
 export default ScheduleCard;
