@@ -12,11 +12,11 @@ import Footer from './components/Footer';
 import { Spin } from 'antd';
 
 function App() {
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 1048);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 1); //1048
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth <= 1048);
+            setIsMobile(window.innerWidth <= 1); //1048
         };
 
         window.addEventListener('resize', handleResize);
