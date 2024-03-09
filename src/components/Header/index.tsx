@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'antd/es/typography/Link';
 
+interface HeaderItemProps {
+    item: {
+        title: string;
+        ref: string;
+    };
+}
+
 const Logo = () => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width="247" height="215" fill="none" viewBox="0 0 247 215"
@@ -44,7 +51,40 @@ const Logo = () => {
             </defs>
         </svg>
     );
-}
+};
+
+const HeaderItem: React.FC<HeaderItemProps> = ({ item }) => {
+    const [hovered, setHovered] = useState(false);
+
+    return (
+        <Link href={item?.ref}>
+            <button
+                onMouseEnter={() => setHovered(true)}
+                onMouseLeave={() => setHovered(false)}
+                onKeyDown={(event) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        setHovered(!hovered);
+                    }
+                }}
+                className="px-2 lg:px-6 py-2 lg:py-3 text-xs xsm:text-sm sm:text-base lg:text-lg leading-[22px] md:px-3 text-blue-500 relative overflow-hidden"
+            >
+                {item?.title}
+                <span
+                    style={{
+                        position: 'absolute',
+                        height: '2px',
+                        backgroundColor: '#90ee90',
+                        width: hovered ? '100%' : '0',
+                        right: hovered ? '0' : 'auto',
+                        left: hovered ? 'auto' : '0',
+                        bottom: '0',
+                        transition: 'width 0.5s'
+                    }}
+                ></span>
+            </button>
+        </Link>
+    );
+};
 
 const Header = () => {
     const [animateHeader, setAnimateHeader] = useState(false);
@@ -76,28 +116,23 @@ const Header = () => {
                 }`}
         >
             <div
-                className={`flex justify-between max-w-screen-xl py-3 ${animateHeader && "py-4"
-                    } mx-auto items-center px-8 trasition ease-in-out duration-500`}
+                className={`flex justify-between max-w-screen-xl py-5 lg:py-3 ${animateHeader && "py-6 lg:py-4"
+                    } mx-auto items-center px-3 lg:px-8 trasition ease-in-out duration-500`}
             >
-                <div className={"flex items-center w-[15vh]"}>
+                <div className={"hidden lg:flex items-center w-[15vh]"}>
                     <a
                         href="#"
-                        className="text-xl font-bold tracking-tighter text-indigo-400 pr-8 flex items-center"
+                        className="pr-8 flex items-center"
                     >
                         <Logo />
                     </a>
                 </div>
-                <div className="flex justify-center flex-grow pr-12">
+                <div className="flex justify-center flex-grow lg:pr-12">
                     <nav>
                         <ul className="flex items-center justify-center gap-6 pt-1">
                             {menuItems?.map((item) => (
                                 <li key={item?.title}>
-                                    <Link href={item?.ref}>
-                                        <a
-                                            className="px-2 lg:px-6 py-6 text-lg border-b-2 border-transparent hover:border-green-400 leading-[22px] md:px-3 text-gray-400">
-                                            {item?.title}
-                                        </a>
-                                    </Link>
+                                    <HeaderItem item={item} />
                                 </li>
                             ))}
                         </ul>
