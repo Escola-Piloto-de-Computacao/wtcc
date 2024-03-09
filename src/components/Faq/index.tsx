@@ -2,41 +2,56 @@ import React from 'react';
 import FaqBox from './FaqBox';
 
 const questions = [
-    {
+    { //TODO: add the link to the subscription page in this answer
         key: 1,
         question: "Os minicursos oferecidos cobram algum valor de inscrição?",
         answer: "Não! Todos os mini-cursos são oferecidos gratuitamente por parte dos alunos e professores, basta apenas se inscrever para participar!"
     },
     {
         key: 2,
-        question: "Apenas os alunos de Computação podem se inscrever nos minicursos?",
-        answer: "Não, todos minicursos são abertos para inscrições de alunos de qualquer curso."
+        question: "Eu ganho horas complementares participando do evento?",
+        answer: "Com certeza, após a realização da inscricão e participação no evento, suas horas serão contabilizadas no sistema. É possível também ganhar horas extras assistindo os minicursos!"
     },
-    {
+    { //TODO: add the link to the minicourses page in this answer
         key: 3,
-        question: "É necessário algum tipo de conhecimento prévio para participar?",
-        answer: "Dependerá do minicurso, a maioria não requer conhecimento conhecimento prévio na área. Veja os pré-requesitos do minicurso na aba de MINICURSOS em Eventos!"
+        question: "É necessário algum tipo de conhecimento prévio para participar dos minicursos?",
+        answer: "Dependerá do minicurso, a maioria não requer conhecimento conhecimento prévio na área. Veja os pré-requesitos do minicurso que deseja na aba de minicursos em EVENTOS!"
     },
     {
         key: 4,
         question: "No período do evento haverá aulas para os alunos de Computação?",
-        answer: "Não, as aulas que ocorrerem nos horários do evento serão suspensas para que todos possam participar dos mini-cursos."
+        answer: "Não, as aulas que ocorrerem nos horários do evento serão suspensas para que todos possam participar dos minicursos! A presença ainda pode ser contabilizada a depender do professor!"
     },
-    {
+    { //TODO: add the link to the map in this answer
         key: 5,
         question: 'Onde fica o LCC - Laboratório de Ciência da Computação?',
         answer: 'O LCC está localizado no leste da UFERSA, próximo ao Expocenter. Veja no mapa acima!'
     },
-    {
+    { //TODO: add the link to the map in this answer
         key: 6,
         question: 'Em qual local será sediado a abertura do evento?',
         answer: 'A abertura será localizada no Auditório da PROEC. Veja no mapa acima!'
     },
     {
         key: 7,
-        question: "Eu ganho horas complementares participando do evento?",
-        answer: "Com certeza, após a realização da inscricão e participação no evento, suas horas serão contabilizadas no sistema. É possível também ganhar horas extras assistindo os minicursos!"
-    }
+        question: "Apenas os alunos de Ciência da Computação podem se inscrever nos minicursos?",
+        answer: "Não, todos minicursos são abertos para inscrições de alunos de qualquer curso."
+    },
+    { //TODO: add the link to the eventos and put on the maratona/palestra page in this answer
+        key: 8,
+        question: "Como faço para participar da maratona de programação ou da mesa redonda?",
+        answer: "Para ver os requisitos e se inscrever, acesse a aba de EVENTOS e clique em Maratona de Programação ou Mesa Redonda!"
+    },
+    { //TODO: check if there will be a live stream and/or recording of the event
+        key: 9,
+        question: "O evento é presencial ou online?",
+        answer: "O evento será presencial, porém, caso não possa comparecer, será possível assistir as palestras e mesas redondas online!"
+    },
+    {
+        key: 10,
+        question: "O coffee break é gratuito?",
+        answer: "Sim, o coffee break é gratuito e será oferecido durante o evento para todos os alunos participantes!"
+    },
 ]
 
 const QuestionMark = () => {
@@ -80,13 +95,13 @@ const Faq: React.FC = () => {
     return (
         <div className='flex items-center flex-col pt-28' id="FAQ">
             <Title />
-            <div className="flex justify-between w-[78%]">
-                <div className="grid gap-12 w-[46%]">
+            <div className="grid grid-cols-2 gap-12 w-[78%]">
+                <div className="grid gap-12">
                     {questions.slice(0, questions.length / 2).map((question) => (
                         <FaqBox key={question.key} question={question.question} answer={question.answer} />
                     ))}
                 </div>
-                <div className="grid gap-12 w-[46%]">
+                <div className="grid gap-12">
                     {questions.slice(questions.length / 2).map((q) => (
                         <FaqBox key={q.key} question={q.question} answer={q.answer} />
                     ))}
