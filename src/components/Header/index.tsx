@@ -113,7 +113,7 @@ const Header = () => {
 
     return (
         <header
-            className={`top-0 w-full backdrop-filter backdrop-blur-lg bg-white/50 fixed z-10 trasition ease-in-out duration-500 ${animateHeader && "shadow-2xl"
+            className={`top-0 w-full backdrop-filter backdrop-blur-lg bg-white/50 fixed z-50 trasition ease-in-out duration-500 ${animateHeader && "shadow-2xl"
                 }`}
         >
             <ProgressBar />
