@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import ProgressBar from './ProgressBar';
 import Link from 'antd/es/typography/Link';
 
 interface HeaderItemProps {
@@ -115,6 +116,7 @@ const Header = () => {
             className={`top-0 w-full backdrop-filter backdrop-blur-lg bg-white/50 fixed z-10 trasition ease-in-out duration-500 ${animateHeader && "shadow-2xl"
                 }`}
         >
+            <ProgressBar />
             <div
                 className={`flex justify-between max-w-screen-xl py-5 lg:py-3 ${animateHeader && "py-6 lg:py-4"
                     } mx-auto items-center px-3 lg:px-8 trasition ease-in-out duration-500`}
