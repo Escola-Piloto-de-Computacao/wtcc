@@ -83,6 +83,7 @@ interface ScheduleProps {
 }
 
 const handleDayInput = (day: number) => {
+    
     if (day === 1) {
         return "Quarta-Feira";
     } else if (day === 2) {
@@ -96,7 +97,7 @@ const handleDayInput = (day: number) => {
 
 const Schedule: React.FC<ScheduleProps> = ({ dayInput, handleDayChange }) => {
     return (
-        <section className="flex items-center flex-col gap-3 pt-36 pb-12" id="Cronograma">
+        <section className=" max-w-full flex items-center flex-col gap-3 pt-36 pb-12" id="Cronograma">
             <h1 className="text-4xl bg-yellow-300 uppercase rounded-lg px-1 mb-2">Cronograma</h1>
             <ul className="text-xl flex items-center flex-row gap-9">
                 <li className={`rounded-lg px-1 ${dayInput === 1 ? 'bg-green-200' : ''} transition duration-300  ease-in-out`}><button onClick={() => handleDayChange(1)}>Dia 1</button></li>
@@ -104,6 +105,7 @@ const Schedule: React.FC<ScheduleProps> = ({ dayInput, handleDayChange }) => {
                 <li className={`rounded-lg px-1 ${dayInput === 3 ? 'bg-green-200' : ''} transition duration-300 ease-in-out`}><button onClick={() => handleDayChange(3)}>Dia 3</button></li>
             </ul>
             <h2 className="text-lg mb-4 mt-2">{handleDayInput(dayInput)}</h2>
+            <h3 className ="text-lg mb-4 mt-2"></h3>
             {activities.map((activity, index) => {
                 let trueDescription = activity.description;
                 if (activity.description === "") {
