@@ -109,3 +109,15 @@
 .no-pointer-events {
     pointer-events: none;
 }
+
+@keyframes highlight {
+    0%{
+        background-color: rgb(187 247 208);
+    }
+    100%{
+        background-color: white;
+    }
+}
+.highlighted{
+    animation: highlight 4s ease-in-out ;
+}

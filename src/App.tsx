@@ -27,6 +27,7 @@ function App() {
     }, []);
 
     const [dayNedded, setDayNedded] = React.useState(1);
+    
 
     const handleDayChange = (day: number) => {
         if (day > 3 || day < 1) return;
@@ -34,6 +35,12 @@ function App() {
         console.log(dayNedded);
     }
 
+    const [index,setIndex] = React.useState(0);
+
+    const handleHighlightedEvent = (index:number) => {
+        setIndex(index);
+    }
+ 
     const [spinning, setSpinning] = useState(true); // start with spinning true
 
     const loadData = async () => {
@@ -69,9 +76,9 @@ function App() {
                 <Spin spinning={spinning} fullscreen />
                 <Header />
                 <Home />
-                <Events dayNedded={dayNedded} handleDayChange={handleDayChange} />
+                <Events dayNedded={dayNedded} handleDayChange={handleDayChange}  highLightedEvent={index} handleHighlightedEvent={handleHighlightedEvent} />
                 <Pictures />
-                <Schedule dayInput={dayNedded} handleDayChange={handleDayChange} />
+                <Schedule dayInput={dayNedded} handleDayChange={handleDayChange} highLightedEvent={index} handleHighlightedEvent={handleHighlightedEvent}  />
                 <Faq />
                 <Sponsorship />
                 <Footer />
