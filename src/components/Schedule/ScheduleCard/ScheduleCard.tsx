@@ -8,8 +8,8 @@ interface ScheduleCardProps {
     Highlighted: Boolean;
 }
 
-const highLight = (Highlighted:Boolean ) =>{
-    if(Highlighted){
+const highLight = (Highlighted: Boolean) => {
+    if (Highlighted) {
         return "highlighted";
     }
 }
@@ -38,7 +38,7 @@ const locPop = () => {
 
 }
 
-const ScheduleCard = ({ time, title, description, location,Highlighted }: ScheduleCardProps) => {
+const ScheduleCard = ({ time, title, description, location, Highlighted }: ScheduleCardProps) => {
     return (
         <div className={`fade-in w-1/2 ${highLight(Highlighted)}`} >
             <div className="w-full flex flex-col items-center gap-1  pb-3 sm:flex-row  border-2 sm:border-0 sm:border-b-2 border-black ">
@@ -47,7 +47,7 @@ const ScheduleCard = ({ time, title, description, location,Highlighted }: Schedu
                 </div>
                 <div className="flex flex-col items-center sm:items-start w-full sm:w-2/4 ">
                     <h3 className=" text-red-600  text-lg">{title}</h3>
-                    <p className="ml-6 text-sm text-left ">{description}</p>
+                    <p className="lg:ml-3 text-sm text-left ">{description}</p>
                 </div>
                 <Popover content={locPop} placement='right' className=" flex items-center sm:items-start align-middle cursor-pointer">
                     <div className=" flex flex-row sm:w-1/4"> {/* TODO add link to map + responsiveness */}
