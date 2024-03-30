@@ -8,6 +8,8 @@ import CurrentEvent from "./CurrentEvent";
 interface EventsProps {
     handleDayChange: (day: number) => void;
     dayNedded: number;
+    highLightedEvent:number;
+    handleHighlightedEvent: (index:number) => void;
 }
 
 interface SelectorProps {
@@ -19,6 +21,8 @@ interface SelectorProps {
     changeEvent: (direction: "left" | "right") => void;
     dayNedded: number;
     handleDayChange: (day: number) => void;
+    highLightedEvent:number;
+    handleHighlightedEvent: (index:number) => void;
 }
 
 const events = [
@@ -134,7 +138,7 @@ const TimePop = () => {
     );
 }
 
-const Selector: React.FC<SelectorProps> = ({ index, name, localizacao, horaEDia, dia, changeEvent, handleDayChange, dayNedded }) => {
+const Selector: React.FC<SelectorProps> = ({ index, name, localizacao, horaEDia, dia, changeEvent, handleDayChange, dayNedded, handleHighlightedEvent }) => {
     const [placement, setPlacement] = useState<'left' | 'right'>('left');
 
     const updatePlacement = () => {
@@ -151,7 +155,7 @@ const Selector: React.FC<SelectorProps> = ({ index, name, localizacao, horaEDia,
     return (
         <div className="flex flex-col items-center text-4xl justify-center">
             <Popover content={TimePop} placement="top" className="mt-2 flex align-middle gap-1 cursor-pointer">
-                <button onClick={() => { handleDayChange(dia); scrollToSchedule() }}>
+                <button onClick={() => { handleDayChange(dia); scrollToSchedule(); handleHighlightedEvent(index)  }}>
                     <div className="mt-2 flex flex-wrap gap-1">
                         <ClickCronograma />
                         <p className="text-base font-mono">{horaEDia}</p>
@@ -175,7 +179,7 @@ const Selector: React.FC<SelectorProps> = ({ index, name, localizacao, horaEDia,
     );
 }
 
-const Events: React.FC<EventsProps> = ({ dayNedded, handleDayChange }) => {
+const Events: React.FC<EventsProps> = ({ dayNedded, handleDayChange, highLightedEvent, handleHighlightedEvent }) => {
 
     const [selectedEvent, setSelectedEvent] = useState(1);
 
@@ -207,7 +211,7 @@ const Events: React.FC<EventsProps> = ({ dayNedded, handleDayChange }) => {
     return (
         <div className="mb-12" id="Eventos">
             <div className="pt-36 pb-3">
-                <Selector {...events[selectedEvent]} changeEvent={changeEvent} dayNedded={dayNedded} handleDayChange={handleDayChange} />
+                <Selector {...events[selectedEvent]} changeEvent={changeEvent} dayNedded={dayNedded} handleDayChange={handleDayChange} highLightedEvent={highLightedEvent} handleHighlightedEvent={handleHighlightedEvent} />
                 <SwitchTransition>
                     <CSSTransition
                         key={selectedEvent}

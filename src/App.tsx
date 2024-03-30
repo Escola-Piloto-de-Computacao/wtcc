@@ -12,11 +12,12 @@ import Footer from './components/Footer';
 import { Spin } from 'antd';
 
 function App() {
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 1); //1048
+
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 0);
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth <= 1); //1048
+            setIsMobile(window.innerWidth <= 0);
         };
 
         window.addEventListener('resize', handleResize);
@@ -28,10 +29,17 @@ function App() {
 
     const [dayNedded, setDayNedded] = React.useState(1);
 
+
     const handleDayChange = (day: number) => {
         if (day > 3 || day < 1) return;
         setDayNedded(day);
         console.log(dayNedded);
+    }
+
+    const [index, setIndex] = React.useState(0);
+
+    const handleHighlightedEvent = (index: number) => {
+        setIndex(index);
     }
 
     const [spinning, setSpinning] = useState(true); // start with spinning true
@@ -69,9 +77,9 @@ function App() {
                 <Spin spinning={spinning} fullscreen />
                 <Header />
                 <Home />
-                <Events dayNedded={dayNedded} handleDayChange={handleDayChange} />
+                <Events dayNedded={dayNedded} handleDayChange={handleDayChange} highLightedEvent={index} handleHighlightedEvent={handleHighlightedEvent} />
                 <Pictures />
-                <Schedule dayInput={dayNedded} handleDayChange={handleDayChange} />
+                <Schedule dayInput={dayNedded} handleDayChange={handleDayChange} highLightedEvent={index} handleHighlightedEvent={handleHighlightedEvent} />
                 <Faq />
                 <Sponsorship />
                 <Footer />

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Popover } from 'antd';
 
 interface ScheduleCardProps {
@@ -6,7 +5,14 @@ interface ScheduleCardProps {
     title: string;
     description: string
     location: string;
-};
+    Highlighted: Boolean;
+}
+
+const highLight = (Highlighted: Boolean) => {
+    if (Highlighted) {
+        return "highlighted";
+    }
+}
 
 const Loc = () => {
     return (
@@ -32,19 +38,21 @@ const locPop = () => {
 
 };
 
-const ScheduleCard = ({ time, title, description, location }: ScheduleCardProps) => {
+const ScheduleCard = ({ time, title, description, location, Highlighted }: ScheduleCardProps) => {
     return (
-        <div className="fade-in">
-            <div className="grid grid-cols-12 items-center gap-1 border-b-2 border-black mx-60 pb-3">
-                <p className="col-start-1 col-span-2 text-base font-semibold">{time}</p>
-                <div className="col-start-3 col-span-8 flex items-start flex-col">
-                    <h3 className="text-red-600  text-lg">{title}</h3>
-                    <p className="w-11/12 ml-6 text-sm text-justify text-balance hyphens-auto break-words">{description}</p>
+        <div className={`fade-in w-1/2 ${highLight(Highlighted)}`} >
+            <div className="w-full flex flex-col items-center gap-1  pb-3 sm:flex-row  border-2 sm:border-0 sm:border-b-2 border-black ">
+                <div className="w-full sm:w-1/4">
+                    <p className="text-base font-semibold">{time}</p>
                 </div>
-                <Popover content={locPop} placement='right' className="flex align-middle gap-6 cursor-pointer">
-                    <div className="grid grid-cols-12"> {/* TODO add link to map + responsiveness */}
+                <div className="flex flex-col items-center sm:items-start w-full sm:w-2/4 ">
+                    <h3 className=" text-red-600  text-lg">{title}</h3>
+                    <p className="lg:ml-3 text-sm text-left ">{description}</p>
+                </div>
+                <Popover content={locPop} placement='right' className=" flex items-center sm:items-start align-middle cursor-pointer">
+                    <div className=" flex flex-row sm:w-1/4"> {/* TODO add link to map + responsiveness */}
                         <Loc />
-                        <p className="text-sm font-semibold col-span-6">{location}</p>
+                        <p className="text-sm font-semibold ">{location}</p>
                     </div>
                 </Popover>
             </div>
