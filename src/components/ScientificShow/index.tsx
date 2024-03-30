@@ -5,7 +5,7 @@ interface MostraItem {
     descricao: string;
     legenda: string;
     // add other properties here
-}
+};
 
 const mostra: MostraItem[] = [/*
     {
@@ -64,7 +64,7 @@ const Button = () => {
             </div>
         </div>
     )
-}
+};
 
 const ButtonAlt = () => {
     return (
@@ -81,7 +81,7 @@ const ButtonAlt = () => {
             </div>
         </div>
     )
-}
+};
 
 const ScientificShow = () => {
     return (
@@ -111,6 +111,6 @@ const ScientificShow = () => {
             <Button />
         </div>
     );
-}
+};
 
 export default ScientificShow;

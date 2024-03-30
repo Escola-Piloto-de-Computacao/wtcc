@@ -1,7 +1,7 @@
 import React from 'react';
-import ScientificShow from "../ScientificShow/ScientificShow";
-import Minicourses from "../Minicourses/Minicourses";
-import Lectures from '../Lectures/Lectures';
+import ScientificShow from "../../ScientificShow";
+import Minicourses from "../../Minicourses";
+import Lectures from "../../Lectures";
 
 const CurrentEvent = ({ index }: { index: number; }) => {
     switch (index) {

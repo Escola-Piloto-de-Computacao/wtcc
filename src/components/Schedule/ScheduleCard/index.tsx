@@ -27,7 +27,7 @@ const Loc = () => {
             </svg>
         </div>
     );
-}
+};
 
 const locPop = () => {
     return (
@@ -36,7 +36,7 @@ const locPop = () => {
         </div>
     );
 
-}
+};
 
 const ScheduleCard = ({ time, title, description, location, Highlighted }: ScheduleCardProps) => {
     return (
@@ -58,6 +58,6 @@ const ScheduleCard = ({ time, title, description, location, Highlighted }: Sched
             </div>
         </div>
     );
-}
+};
 
 export default ScheduleCard;

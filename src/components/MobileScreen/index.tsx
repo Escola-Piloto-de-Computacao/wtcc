@@ -20,6 +20,6 @@ const MobileScreen = () => {
             </div>
         </section>
     );
-}
+};
 
 export default MobileScreen;
