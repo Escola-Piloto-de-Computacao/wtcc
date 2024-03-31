@@ -88,33 +88,31 @@ interface ScheduleProps {
 }
 
 const handleDayInput = (day: number) => {
-    var weekDay;
-    var date;
+    let weekDay;
+    let date;
 
     if (day === 1) {
         weekDay = "Quarta-Feira";
-        date = "29/05/2024"
+        date = "22/05/2024"
     } else if (day === 2) {
         weekDay = "Quinta-Feira";
-        date = "30/05/2024"
+        date = "23/05/2024"
     } else if (day === 3) {
         weekDay = "Sexta-Feira";
-        date = "31/05/2024"
-    } else {
-        return "";
+        date = "24/05/2024"
     }
 
     return (
-        <div className="mt-4 mb-8">
+        <div className="mt-4 mb-16">
             <h2 className="text-lg">{weekDay}</h2>
-            <h3 className="text-base">{date}</h3>
+            <h3 className="text-sm">{date}</h3>
         </div>
     );
 }
 
 const Schedule: React.FC<ScheduleProps> = ({ dayInput, handleDayChange, highLightedEvent, handleHighlightedEvent }) => {
     return (
-        <section className=" max-w-full flex items-center flex-col gap-3 sm:gap-0 pt-36 pb-12" id="Cronograma">
+        <section className="max-w-full flex items-center flex-col gap-3 sm:gap-0 pt-36 pb-12" id="Cronograma">
             <h1 className="text-4xl bg-yellow-300 uppercase rounded-lg px-1 mb-2">Cronograma</h1>
             <ul className="text-xl flex items-center flex-row gap-9">
                 <li className={`rounded-lg px-1 ${dayInput === 1 ? 'bg-green-200' : ''} transition duration-300  ease-in-out`}><button onClick={() => { handleDayChange(1); handleHighlightedEvent(0) }}>Dia 1</button></li>
@@ -130,25 +128,24 @@ const Schedule: React.FC<ScheduleProps> = ({ dayInput, handleDayChange, highLigh
                 }
                 if (activity.day === dayInput) {
                     if (activity.index === highLightedEvent) {
-
                         return (
                             <ScheduleCard key={index}
                                 time={activity.time}
                                 title={activity.title}
                                 description={trueDescription}
                                 location={activity.location}
-                                Highlighted={true} />
-                        )
-
+                                highLighted={true} />
+                        );
+                    } else {
+                        return (
+                            <ScheduleCard key={index}
+                                time={activity.time}
+                                title={activity.title}
+                                description={trueDescription}
+                                location={activity.location}
+                                highLighted={false} />
+                        );
                     }
-                    return (
-                        <ScheduleCard key={index}
-                            time={activity.time}
-                            title={activity.title}
-                            description={trueDescription}
-                            location={activity.location}
-                            Highlighted={false} />
-                    );
                 }
             })}
         </section>

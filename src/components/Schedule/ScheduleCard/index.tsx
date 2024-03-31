@@ -1,18 +1,13 @@
 import { Popover } from 'antd';
+import './schedule.css';
 
 interface ScheduleCardProps {
     time: string;
     title: string;
     description: string
     location: string;
-    Highlighted: Boolean;
-}
-
-const highLight = (Highlighted: Boolean) => {
-    if (Highlighted) {
-        return "highlighted";
-    }
-}
+    highLighted: boolean;
+};
 
 const Loc = () => {
     return (
@@ -38,10 +33,10 @@ const locPop = () => {
 
 };
 
-const ScheduleCard = ({ time, title, description, location, Highlighted }: ScheduleCardProps) => {
+const ScheduleCard = ({ time, title, description, location, highLighted }: ScheduleCardProps) => {
     return (
-        <div className={`fade-in w-1/2 ${highLight(Highlighted)}`} >
-            <div className="w-full flex flex-col items-center gap-1  pb-3 sm:flex-row  border-2 sm:border-0 sm:border-b-2 border-black ">
+        <div className={`fade-in w-1/2 ${highLighted ? 'animate-highlighter' : ''}`} >
+            <div className="w-full flex flex-col items-center gap-1 pb-3 sm:flex-row border-2 sm:border-0 sm:border-b-2 border-black ">
                 <div className="w-full sm:w-1/4">
                     <p className="text-base font-semibold">{time}</p>
                 </div>
@@ -49,8 +44,8 @@ const ScheduleCard = ({ time, title, description, location, Highlighted }: Sched
                     <h3 className=" text-red-600  text-lg">{title}</h3>
                     <p className="lg:ml-3 text-sm text-left ">{description}</p>
                 </div>
-                <Popover content={locPop} placement='right' className=" flex items-center sm:items-start align-middle cursor-pointer">
-                    <div className=" flex flex-row sm:w-1/4"> {/* TODO add link to map + responsiveness */}
+                <Popover content={locPop} placement='right' className="flex items-center sm:items-start align-middle cursor-pointer">
+                    <div className="flex flex-row sm:w-1/4">
                         <Loc />
                         <p className="text-sm font-semibold ">{location}</p>
                     </div>

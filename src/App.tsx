@@ -14,7 +14,6 @@ import { Spin } from 'antd';
 function App() {
 
     const [isMobile, setIsMobile] = useState(window.innerWidth < 0);
-
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 0);
@@ -28,22 +27,17 @@ function App() {
     }, []);
 
     const [dayNedded, setDayNedded] = React.useState(1);
-
-
     const handleDayChange = (day: number) => {
         if (day > 3 || day < 1) return;
         setDayNedded(day);
-        console.log(dayNedded);
     }
 
     const [index, setIndex] = React.useState(0);
-
     const handleHighlightedEvent = (index: number) => {
         setIndex(index);
     }
 
-    const [spinning, setSpinning] = useState(true); // start with spinning true
-
+    const [spinning, setSpinning] = useState(true);
     const loadData = async () => {
         try {
             // replace this with your actual data loading logic

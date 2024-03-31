@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import './ProgressBar.css';
 
 const ProgressBar = () => {
     const [scroll, setScroll] = useState(0);
@@ -17,7 +16,7 @@ const ProgressBar = () => {
     }, []);
 
     return (
-        <div className="progress-bar" style={{ width: `${scroll}%` }} />
+        <div className="fixed top-0 left-0 h-1 bg-black z-50" style={{ width: `${scroll}%` }} />
     );
 };
 

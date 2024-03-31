@@ -1,6 +1,5 @@
 import React from 'react';
 import Card from './Card';
-import htmlcssjavascript from "../../assets/minicourses/htmlcssjavascript.jpg";
 
 //TODO: add actual courses / add actual teachers
 
