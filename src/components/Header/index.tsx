@@ -67,7 +67,7 @@ const HeaderItem: React.FC<HeaderItemProps> = ({ item }) => {
                         setHovered(!hovered);
                     }
                 }}
-                className="px-2 lg:px-6 py-2 lg:py-3 text-xs xsm:text-sm sm:text-base lg:text-lg leading-[22px] md:px-3 text-blue-500 relative overflow-hidden"
+                className="px-2 lg:px-6 py-2 lg:py-3 text-lg leading-[22px] md:px-3 text-blue-500 relative overflow-hidden"
             >
                 {item?.title}
                 <span
@@ -131,7 +131,7 @@ const Header = () => {
                 </div>
                 <div className="flex justify-center flex-grow lg:pr-12">
                     <nav>
-                        <ul className="flex items-center justify-center gap-6 pt-1">
+                        <ul className="flex items-center justify-center gap-3 md:gap-5 lg:gap-6 pt-1">
                             {menuItems?.map((item) => (
                                 <li key={item?.title}>
                                     <HeaderItem item={item} />
