@@ -113,8 +113,8 @@ const Header = () => {
 
     return (
         <header
-            className={`top-0 w-full backdrop-filter backdrop-blur-lg bg-white/50 fixed z-50 trasition ease-in-out duration-500 ${animateHeader && "shadow-2xl"
-                }`}
+            className={`top-0 w-full backdrop-filter backdrop-blur-lg bg-white/50 fixed z-50 trasition ease-in-out duration-500
+            ${animateHeader && "shadow-2xl"}`}
         >
             <ProgressBar />
             <div
@@ -122,10 +122,7 @@ const Header = () => {
                     } mx-auto items-center px-3 lg:px-8 trasition ease-in-out duration-500`}
             >
                 <div className={"hidden lg:flex items-center w-[15vh]"}>
-                    <a
-                        href="#"
-                        className="pr-8 flex items-center"
-                    >
+                    <a href="#" className="pr-8 flex items-center" >
                         <Logo />
                     </a>
                 </div>
