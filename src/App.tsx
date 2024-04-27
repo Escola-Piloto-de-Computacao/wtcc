@@ -13,10 +13,24 @@ import { Spin } from 'antd';
 
 function App() {
 
+    const getPicturesSize = () =>{
+        if(window.innerWidth  < 768){
+            return [150,100];
+        }
+        else if(window.innerWidth < 1100){
+            return [175,116];
+        }
+        else{
+            return [275,183];
+        }
+    }
+  
     const [isMobile, setIsMobile] = useState(window.innerWidth < 0);
+    const [picturesSize, setPicturesSize] = useState(getPicturesSize()); 
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 0);
+            setPicturesSize(getPicturesSize()); 
         };
 
         window.addEventListener('resize', handleResize);
@@ -26,13 +40,14 @@ function App() {
         };
     }, []);
 
-    const [dayNedded, setDayNedded] = React.useState(1);
+    const [dayNedded, setDayNedded] = useState(1);
     const handleDayChange = (day: number) => {
         if (day > 3 || day < 1) return;
         setDayNedded(day);
     }
 
-    const [index, setIndex] = React.useState(0);
+
+    const [index, setIndex] = useState(0);
     const handleHighlightedEvent = (index: number) => {
         setIndex(index);
     }
@@ -72,7 +87,7 @@ function App() {
                 <Header />
                 <Home />
                 <Events dayNedded={dayNedded} handleDayChange={handleDayChange} highLightedEvent={index} handleHighlightedEvent={handleHighlightedEvent} />
-                <Pictures />
+                <Pictures picturesSize={picturesSize} />
                 <Schedule dayInput={dayNedded} handleDayChange={handleDayChange} highLightedEvent={index} handleHighlightedEvent={handleHighlightedEvent} />
                 <Faq />
                 <Sponsorship />

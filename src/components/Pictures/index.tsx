@@ -46,11 +46,14 @@ const imageFiles = [
     { link: i42, description: "" }
 ];
 
-const Pictures = () => {
+interface picturesProps{
+    picturesSize:number[];
+}
+
+const Pictures: React.FC<picturesProps> =  ({picturesSize}) => {
 
     //will be used to trigger a re-render
     const [key, setKey] = useState(0);
-
     const [currentPage, setCurrentPage] = useState(1);
     const imagesPerPage = 6;
 
@@ -77,27 +80,22 @@ const Pictures = () => {
     return (
         <div className="pt-36 mb-20 flex flex-col flex-wrap items-center" id="Galeria">
             <h2 className="bg-yellow-400 text-4xl p-1 rounded-lg mb-12">GALERIA</h2>
-            <div className="grid grid-cols-12 gap-8 mx-36">
+            <div className="grid grid-cols-12 gap-8 sm:mx-36">
                 <Image.PreviewGroup>
-                    {currentImages.map((image, index) => (
-                        <div key={index} className="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-4 xl:col-span-4">
+                {currentImages.map((image, index) => (
+                        <div key={index} className="col-span-6 md:col-span-4">
                             <Image
-                                key={index + key} // add key here
+                                width={picturesSize[0]}
+                                height={picturesSize[1]}
+                                key={index + key}
                                 src={image.link}
                                 alt="Imagem de eventos passados"
-                                className="w-200 h-100 rounded-lg image-fade-in"
+                                className="rounded-lg image-fade-in"
                             />
-                            <p className="ml-6 text-left text-sm">{image.description}</p>
+                            <p className=" text-center text-xs sm:text-sm">{image.description}</p>
                         </div>
                     ))}
-                </Image.PreviewGroup>
-                {/* render the empty divs */}
-                {Array.from({ length: emptyDivsCount }, (_, index) => (
-                    <div
-                        key={index + currentImages.length}
-                        className="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-4 xl:col-span-4 bg-gray-200 rounded-lg"
-                    />
-                ))}
+                </Image.PreviewGroup>      
             </div>
             <div className="mt-5">
                 <Pagination
