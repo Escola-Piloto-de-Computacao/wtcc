@@ -2,6 +2,7 @@ import React from 'react';
 import ScientificShow from "../../ScientificShow";
 import Minicourses from "../../Minicourses";
 import Lectures from "../../Lectures";
+import RoundTable from '../../RoundTable';
 
 const CurrentEvent = ({ index }: { index: number; }) => {
     switch (index) {
@@ -23,6 +24,10 @@ const CurrentEvent = ({ index }: { index: number; }) => {
         case 5:
             return (
                 <Lectures />
+            );
+        case 6:
+            return (
+                <RoundTable />
             );
         default:
             return (

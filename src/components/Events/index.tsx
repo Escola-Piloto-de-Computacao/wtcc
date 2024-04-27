@@ -60,14 +60,14 @@ const events = [
         localizacao: "Auditório da PROEC",
         horaEDia: "8:30 - 9:30 ----- Quinta-Feira",
         dia: 2
-    },/*
+    },
     {
         index: 6,
         name: "MESA REDONDA",
         localizacao: "Auditório da PROEC",
         horaEDia: "10:00 - 11:30 ----- Quinta-Feira",
         dia: 2
-    }*/
+    }
 ];
 
 const ClickCronograma = () => {
