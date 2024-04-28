@@ -46,11 +46,11 @@ const imageFiles = [
     { link: i42, description: "" }
 ];
 
-interface picturesProps{
-    picturesSize:number[];
+interface PicturesProps {
+    picturesSize: number[];
 }
 
-const Pictures: React.FC<picturesProps> =  ({picturesSize}) => {
+const Pictures: React.FC<PicturesProps> = ({ picturesSize }) => {
 
     //will be used to trigger a re-render
     const [key, setKey] = useState(0);
@@ -82,8 +82,8 @@ const Pictures: React.FC<picturesProps> =  ({picturesSize}) => {
             <h2 className="bg-yellow-400 text-4xl p-1 rounded-lg mb-12">GALERIA</h2>
             <div className="grid grid-cols-12 gap-8 sm:mx-36">
                 <Image.PreviewGroup>
-                {currentImages.map((image, index) => (
-                        <div key={index} className="col-span-6 md:col-span-4">
+                    {currentImages.map((image, index) => (
+                        <div key={image.link} className="col-span-6 md:col-span-4">
                             <Image
                                 width={picturesSize[0]}
                                 height={picturesSize[1]}
@@ -95,7 +95,7 @@ const Pictures: React.FC<picturesProps> =  ({picturesSize}) => {
                             <p className=" text-center text-xs sm:text-sm">{image.description}</p>
                         </div>
                     ))}
-                </Image.PreviewGroup>      
+                </Image.PreviewGroup>
             </div>
             <div className="mt-5">
                 <Pagination
