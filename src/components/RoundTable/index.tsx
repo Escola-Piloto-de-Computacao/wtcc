@@ -3,16 +3,20 @@ import { Image } from "antd";
 import Mesa1 from "../../assets/RoundTable/Mesa1.png";
 import Mesa2 from "../../assets/RoundTable/Mesa2.png";
 
-interface Palestrante {
+type Palestrante = {
     name: string;
     description: string;
 }
 
-const PalestranteCard = ({ name, description }: Palestrante) => {
+interface PalestranteCardProps {
+    palestrante: Palestrante;
+}
+
+const PalestranteCard: React.FC<PalestranteCardProps> = ({ palestrante }) => {
     return (
         <div>
-            <h2 className="mt-5 text-2xl font-bold text-justify">{name}</h2>
-            <p className="mt-1 text-justify">{description}</p>
+            <h2 className="mt-5 text-2xl font-bold text-justify">{palestrante.name}</h2>
+            <p className="mt-1 text-justify">{palestrante.description}</p>
         </div>
     );
 }
@@ -43,33 +47,37 @@ const RoundTable = () => {
     }
 
     return (
-        <div className="w-full grid grid-cols-12 gap-10 mt-10">
-            <div className="col-start-1 col-span-12">
-                <h1 className="text-4xl font-bold text-center font-poppings">Título da Mesa Redonda</h1>
-            </div>
-            <div className="col-start-3 col-span-4">
-                <h2 className="text-3xl font-bold text-left font-poppings">{descricao.title}</h2>
-                <p className="mt-1 mb-5 text-justify">{descricao.content}</p>
+        <div className="flex flex-col gap-4 mt-10 mx-48 font-poppings">
+            <h1 className="mb-8 text-4xl font-bold text-center">Título da Mesa Redonda</h1>
+            <div className="flex justify-between items-center">
+                <div className="w-3/4 mr-16">
+                    <h2 className="text-3xl font-bold text-left">{descricao.title}</h2>
+                    <p className="mt-1 mb-5 text-justify">{descricao.content}</p>
+                </div>
                 <Image
-                    width= {400}
-                    height={300}
-                    src={descricao.img}
-                    alt="Mesa redonda"
-                    style={{ borderRadius: "15px" }}
-                />
-                <PalestranteCard name={palestrantes[0].name} description={palestrantes[0].description} />
-            </div>
-            <div className="col-start-7 col-span-4 ">
-                <Image
-                    width= {400}
+                    width={400}
                     height={300}
                     src={explicacao.img}
                     alt="Mesa redonda"
                     style={{ borderRadius: "15px" }}
                 />
-                <h2 className="mt-5 ml-6 text-3xl font-bold text-left font-poppings">{explicacao.title}</h2>
-                <p className="mt-1 ml-6 text-justify">{explicacao.content}</p>
-                <PalestranteCard name={palestrantes[1].name} description={palestrantes[1].description} />
+            </div>
+            <div className="flex justify-between items-center">
+                <Image
+                    width={425}
+                    height={300}
+                    src={descricao.img}
+                    alt="Mesa redonda"
+                    style={{ borderRadius: "15px" }}
+                />
+                <div className="w-3/4 ml-16">
+                    <h2 className="mt-5 ml-6 text-3xl font-bold text-left">{explicacao.title}</h2>
+                    <p className="mt-1 ml-6 text-justify">{explicacao.content}</p>
+                </div>
+            </div>
+            <div className="flex flex-row gap-16">
+                <PalestranteCard palestrante={palestrantes[0]} />
+                <PalestranteCard palestrante={palestrantes[1]} />
             </div>
         </div>
     );
