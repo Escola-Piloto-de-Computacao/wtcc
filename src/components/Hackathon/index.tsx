@@ -19,6 +19,32 @@ const eventCard = (event: hackathonEvent) => {
     )
 }
 
+const Inscrever = () => {
+    
+    return (
+        <div className="m-2 mt-12 lg:mt-0">
+            <button
+                className="font-bold text-white bg-green-600 rounded-2xl px-4 py-2 text-2xl "
+                onClick={() => window.location.href = "https://www.youtube.com/watch?v=RS4ZzYjFZcE"}>
+                INSCREVA-SE!
+            </button>
+        </div>
+    );
+}
+
+const Regulamento = () => {
+    
+    return (
+        <div className="m-2 mt-12 lg:mt-0">
+            <button
+                className="font-bold text-white bg-green-600 rounded-2xl px-4 py-2 text-2xl "
+                onClick={() => window.location.href = "/EditalMinicursos.pdf"}>
+                REGULAMENTO
+            </button>
+        </div>
+    );
+}
+
 const Hackathon = () => {
     const hackathonEvents : hackathonEvent[] = [
         {
@@ -40,7 +66,7 @@ const Hackathon = () => {
 
     return (
         <div className="w-full grid grid-cols-12 gap-10 mt-10 ">
-            <div className=" col-start-2 col-span-5 rounded-xl flex flex-col justify-center">
+            <div className="mt-20 col-start-2 col-span-5 rounded-xl flex flex-col justify-center">
                 <Image
                     width="100%"
                     src={hackathonPics}
@@ -52,6 +78,12 @@ const Hackathon = () => {
                 <h1 className="ml-6 text-4xl font-bold text-center font-poppings">Cronograma</h1>
                 <div className="mt-1 ml-6">
                     {hackathonEvents.map((event) => eventCard(event))}
+                </div>
+            </div>
+            <div className="col-start-3 col-span-8 mt-4 ml-6 flex flex-col flex-wrap">
+                <div className=" mt-1 ml-6 mr-10 flex flex-row justify-between">
+                    <Regulamento />
+                    <Inscrever /> 
                 </div>
             </div>
         </div>
