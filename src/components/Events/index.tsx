@@ -46,14 +46,14 @@ const events = [
         localizacao: "LCC",
         horaEDia: "14:00 - 18:00 ----- Quarta-Feira e Quinta-Feira",
         dia: 1
-    },/*
+    },
     {
         index: 4,
         name: "HACKATHON",
         localizacao: "Auditório da PROEC",
         horaEDia: "8:00 - 11:00 ----- Sexta-Feira",
         dia: 3
-    },*/
+    },
     {
         index: 5,
         name: "PALESTRA",
