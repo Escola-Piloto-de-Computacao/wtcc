@@ -2,6 +2,7 @@ import React from 'react';
 import ScientificShow from "../../ScientificShow";
 import Minicourses from "../../Minicourses";
 import Lectures from "../../Lectures";
+import Hackathon from '../../Hackathon';
 
 const CurrentEvent = ({ index }: { index: number; }) => {
     switch (index) {
@@ -19,6 +20,10 @@ const CurrentEvent = ({ index }: { index: number; }) => {
         case 3:
             return (
                 <Minicourses />
+            );
+        case 4:
+            return (
+                <Hackathon />
             );
         case 5:
             return (
