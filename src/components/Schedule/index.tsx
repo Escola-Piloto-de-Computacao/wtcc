@@ -94,13 +94,13 @@ const handleDayInput = (day: number) => {
 
     if (day === 1) {
         weekDay = "Quarta-Feira";
-        date = "22/05"
+        date = "05/06"
     } else if (day === 2) {
         weekDay = "Quinta-Feira";
-        date = "23/05"
+        date = "06/06"
     } else if (day === 3) {
         weekDay = "Sexta-Feira";
-        date = "24/05"
+        date = "07/06"
     }
 
     return (
